@@ -1,4 +1,4 @@
-//codeWars 25APR24
+//codeWars 24APR24
 
 //TASK
 //Clock shows h hours, m minutes and s seconds after midnight.
@@ -13,13 +13,28 @@
 // return answer
 
 //SOLUTION
-let ans
+// let ans
+//
+// function past(h, m, s){
+//     ans = ( (h * 3600) + (m * 60) + (s) ) * 1000
+//     console.log(ans)
+//     return ( (h * 3600) + (m * 60) + (s) ) * 1000
+// }
+//
+// past(1,1,1)
 
-function past(h, m, s){
-    ans = ( (h * 3600) + (m * 60) + (s) ) * 1000
-    console.log(ans)
-    return ( (h * 3600) + (m * 60) + (s) ) * 1000
-}
 
-past(1,1,1)
+//codeWars 25APR24
+
+//TASK
+//Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
+// You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word.
+// Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+//PSEUDOCODE
+
+//SOLUTION
+smash = function (words) {
+    return words.join(" ");
+};
 
