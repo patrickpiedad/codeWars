@@ -14,8 +14,10 @@ function countSheeps(sheep) {
     let count = 0
     for (let i = 0; i < sheep.length; i++) {
         if ( sheep[i] === true || sheep[i] >= 1) {
+        // if ( sheep[i] === true, 1) {
             count++
         } else if (countSheeps[i] === undefined || countSheeps[i] === null || countSheeps[i]=== false){
+        // } else if (countSheeps[i] === undefined, null, false){
             count = count
         }
     }
