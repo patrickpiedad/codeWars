@@ -17,15 +17,32 @@
 
 
 //SOLUTION
-class SmallestIntegerFinder {
-    findSmallestInt(args) {
-        return Math.min(...args)
-    }
+// class SmallestIntegerFinder {
+//     findSmallestInt(args) {
+//         return Math.min(...args)
+//     }
+// }
+
+
+// BEST SOLUTION
+
+
+//codeWars 06MAY24
+
+//TASK
+// Write a function which converts the input string to uppercase.
+
+//PSEUDOCODE
+// get input and use .toUpperCase and return
+
+
+
+//SOLUTION
+function makeUpperCase(str) {
+    return str.toUpperCase()
 }
 
-
-
-
+console.log(makeUpperCase('let\'s go to the mall'))
 
 
 // BEST SOLUTION
