@@ -12,30 +12,26 @@
 // Note:
 // Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
 
-
 //PSEUDOCODE
 // receive classPoints in array form
 // add yourPoints to classPoints using .push
 // let average = classPoints.reduce() / classPoints.length
 // conditional, if yourPoints > average, return true, else if return false
 
-
 //SOLUTION
 function betterThanAverage(classPoints, yourPoints) {
-    classPoints.push[yourPoints]
-    let average = ( (classPoints.reduce( (acc, currVal) => (acc + currVal), 0)) / classPoints.length )
-    if (yourPoints > average){
-        return true
-    }else{
-        return false
-    }
-  }
-  
-
-
+	classPoints.push[yourPoints]
+	let average =
+		classPoints.reduce((acc, currVal) => acc + currVal, 0) /
+		classPoints.length
+	if (yourPoints > average) {
+		return true
+	} else {
+		return false
+	}
+}
 
 // BEST SOLUTION
 // function betterThanAverage(classPoints, yourPoints) {
-//     return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+//     return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
 //   }
-
