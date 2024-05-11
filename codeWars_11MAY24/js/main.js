@@ -35,3 +35,39 @@ function betterThanAverage(classPoints, yourPoints) {
 // function betterThanAverage(classPoints, yourPoints) {
 //     return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
 //   }
+
+//NEW TASK
+
+//TASK
+// Your task is to create a function that does four basic mathematical operations.
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+// Note:
+// Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
+
+//PSEUDOCODE
+// if operation = +, return value1 + value 2
+// do for all operations
+
+//SOLUTION
+function basicOp(operation, value1, value2) {
+	if (operation === '+') {
+		return value1 + value2
+	} else if (operation === '-') {
+		return value1 - value2
+	} else if (operation === '*') {
+		return value1 * value2
+	} else if (operation === '/') {
+		return value1 / value2
+	}
+}
+
+// BEST SOLUTION
