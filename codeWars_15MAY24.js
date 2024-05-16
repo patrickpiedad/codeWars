@@ -23,3 +23,14 @@ console.log(filter_list([1, 2, 'a', 'b']))
 console.log(filter_list([1, 'a', 'b', 0, 15]))
 
 // BEST SOLUTION
+
+//DELETE
+function coinFlip() {
+	if (Math.random() < 0.5) {
+		return 'heads'
+	} else return 'tails'
+}
+console.log(coinFlip())
+
+let coin = (_) => (Math.random() < 0.5 ? 'heads' : 'tails')
+console.log(coin())
