@@ -1,17 +1,9 @@
-//codeWars DDMMMYY
+///////////////////////////////codeWars DDMMMYY///////////////////////////////
 
 //TASK
 
-
-
 //PSEUDOCODE
-
-
 
 //SOLUTION
 
-
-
-
 // BEST SOLUTION
-
