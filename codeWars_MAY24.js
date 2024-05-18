@@ -414,15 +414,15 @@
 
 //SOLUTION
 
-function repeatStr(n, s) {
-	let array = []
-	for (let i = 0; i < n; i++) {
-		array.push(s)
-	}
-	return array.join('')
-}
+// function repeatStr(n, s) {
+// 	let array = []
+// 	for (let i = 0; i < n; i++) {
+// 		array.push(s)
+// 	}
+// 	return array.join('')
+// }
 
-repeatStr(5, 'i')
+// repeatStr(5, 'i')
 
 // BEST SOLUTION
 // function repeatStr (n, s) {
@@ -646,9 +646,33 @@ repeatStr(5, 'i')
 ///////////////////////////////codeWars 18MAY24///////////////////////////////
 
 //TASK
+// Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013).
+// Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter,
+// he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+// Example:
+
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+// Link to Jaden's former Twitter account @officialjaden via archive.org
 
 //PSEUDOCODE
+// get input string
+// separate input string into array elements by word using .split(' ')
+// loop through array and capitalize the first letter, which is array index [0] using .toUpperCase
+// concatenate capitalized letter with the rest of the array element using .substr
+// join array back into string using join(' ')
+// console.log and check
 
 //SOLUTION
+String.prototype.toJadenCase = function () {
+	return this.split(' ')
+		.map(function (word) {
+			return word.charAt(0).toUpperCase() + word.slice(1)
+		})
+		.join(' ')
+}
 
-// BEST SOLUTION
+//BEST SOLUTION
