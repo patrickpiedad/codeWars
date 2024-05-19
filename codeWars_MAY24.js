@@ -667,12 +667,37 @@
 // console.log and check
 
 //SOLUTION
-String.prototype.toJadenCase = function () {
-	return this.split(' ')
-		.map(function (word) {
-			return word.charAt(0).toUpperCase() + word.slice(1)
-		})
-		.join(' ')
-}
+// String.prototype.toJadenCase = function () {
+// 	return this.split(' ')
+// 		.map(function (word) {
+// 			return word.charAt(0).toUpperCase() + word.slice(1)
+// 		})
+// 		.join(' ')
+// }
 
 //BEST SOLUTION
+
+///////////////////////////////codeWars 19MAY24///////////////////////////////
+
+//TASK
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers.
+// No floats or non-positive integers will be passed.
+
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+// [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+//PSEUDOCODE
+// get array, arr.sort((a,b) => a-b), this will make the index [0] and index [1] the lowest two integers
+// return index [0] + index [1]
+
+//SOLUTION
+// function sumTwoSmallestNumbers(numbers) {
+// 	let sortArr = numbers.sort((a, b) => a - b)
+// 	return sortArr[0] + sortArr[1]
+// }
+
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
+// console.log(sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453]))
+
+// BEST SOLUTION
