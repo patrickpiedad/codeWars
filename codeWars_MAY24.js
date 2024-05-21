@@ -747,3 +747,24 @@
 //         max = Math.max(a, b);
 //     return (max - min + 1) * (min + max) / 2;
 //   }
+
+///////////////////////////////codeWars 20MAY24///////////////////////////////
+
+//TASK
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+//PSEUDOCODE
+// get array
+// covert all strings to numbers by using Number(array[i]) OR use .reduce(Number(array[i]))
+// return answer
+
+//SOLUTION
+function sumMix(x) {
+	return x.reduce((acc, currVal) => Number(acc) + Number(currVal), 0)
+}
+
+console.log(sumMix([1, 2, '3', 4, 5, 6, '7', '10']))
+
+// BEST SOLUTION
