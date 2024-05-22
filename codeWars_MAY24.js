@@ -748,7 +748,7 @@
 //     return (max - min + 1) * (min + max) / 2;
 //   }
 
-///////////////////////////////codeWars 20MAY24///////////////////////////////
+///////////////////////////////codeWars 21MAY24///////////////////////////////
 
 //TASK
 // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
@@ -761,10 +761,27 @@
 // return answer
 
 //SOLUTION
-function sumMix(x) {
-	return x.reduce((acc, currVal) => Number(acc) + Number(currVal), 0)
-}
+// function sumMix(x) {
+// 	return x.reduce((acc, currVal) => Number(acc) + Number(currVal), 0)
+// }
 
-console.log(sumMix([1, 2, '3', 4, 5, 6, '7', '10']))
+// console.log(sumMix([1, 2, '3', 4, 5, 6, '7', '10']))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 22MAY24///////////////////////////////
+
+//TASK
+// Bob needs a fast way to calculate the volume of a cuboid with three values:
+// the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+
+//PSEUDOCODE
+
+//SOLUTION
+class Kata {
+	static getVolumeOfCuboid(length, width, height) {
+		return length * width * height
+	}
+}
 
 // BEST SOLUTION
