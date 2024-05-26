@@ -938,7 +938,16 @@
 // convert to uppercase using .toUpperCase() and add '.' between the two upper case letters by using `` or .join('.')
 
 //SOLUTION
-// function abbrevName(name) {}
+// function abbrevName(name) {
+// 	name = name.split(' ')
+// 	console.log(name)
+// 	let newName = name.map(i => i[0].toUpperCase())
+// 	console.log(newName)
+// 	let ans = newName.join('.')
+// 	console.log(ans)
+// }
+
+abbrevName('Patrick Piedad')
 
 // BEST SOLUTION
 // function abbrevName(name){
