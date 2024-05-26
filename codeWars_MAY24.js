@@ -884,15 +884,35 @@
 //PSEUDOCODE
 
 //SOLUTION
-function doubleChar(str) {
-	return str
-		.split('')
-		.map(function (letter) {
-			return letter + letter
-		})
-		.join('')
-}
+// function doubleChar(str) {
+// 	return str
+// 		.split('')
+// 		.map(function (letter) {
+// 			return letter + letter
+// 		})
+// 		.join('')
+// }
 
-console.log(doubleChar('String'))
+// console.log(doubleChar('String'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 26MAY24///////////////////////////////
+
+//TASK
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+//PSEUDOCODE
+// create function with two parameters, name and owner
+// if name === owner, return hello boss, else return hello guest
+
+//SOLUTION
+function greet(name, owner) {
+	if (name === owner) {
+		return 'Hello boss'
+	} else {
+		return 'Hello guest'
+	}
+}
 
 // BEST SOLUTION
