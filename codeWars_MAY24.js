@@ -907,12 +907,42 @@
 // if name === owner, return hello boss, else return hello guest
 
 //SOLUTION
-function greet(name, owner) {
-	if (name === owner) {
-		return 'Hello boss'
-	} else {
-		return 'Hello guest'
-	}
-}
+// function greet(name, owner) {
+// 	if (name === owner) {
+// 		return 'Hello boss'
+// 	} else {
+// 		return 'Hello guest'
+// 	}
+// }
 
 // BEST SOLUTION
+// function greet(name, owner) {
+// 	return name === owner ? 'Hello boss' : 'Hello guest'
+// }
+
+//TASK
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+//PSEUDOCODE
+// Write function that takes in 'first last' as parameters
+// select first letter of 'first' by using string[0]
+// select first letter of 'last' by using string[0]
+// convert to uppercase using .toUpperCase() and add '.' between the two upper case letters by using `` or .join('.')
+
+//SOLUTION
+// function abbrevName(name) {}
+
+// BEST SOLUTION
+// function abbrevName(name){
+
+//     return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+
+// }
