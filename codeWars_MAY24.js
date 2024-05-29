@@ -1014,33 +1014,63 @@
 // return 'x / arr.length'
 
 //SOLUTION
-function printerError(s) {
-	let str = s.split('')
-	let x = 0
-	for (let i = 0; i < str.length; i++)
-		if (
-			str[i] === 'a' ||
-			str[i] === 'b' ||
-			str[i] === 'c' ||
-			str[i] === 'd' ||
-			str[i] === 'e' ||
-			str[i] === 'f' ||
-			str[i] === 'g' ||
-			str[i] === 'h' ||
-			str[i] === 'i' ||
-			str[i] === 'j' ||
-			str[i] === 'k' ||
-			str[i] === 'l' ||
-			str[i] === 'm'
-		) {
-			x += 1
-		} else {
-			x = x
-		}
-	let error = str.length - x
-	return `${error}/${str.length}`
-}
+// function printerError(s) {
+// 	let str = s.split('')
+// 	let x = 0
+// 	for (let i = 0; i < str.length; i++)
+// 		if (
+// 			str[i] === 'a' ||
+// 			str[i] === 'b' ||
+// 			str[i] === 'c' ||
+// 			str[i] === 'd' ||
+// 			str[i] === 'e' ||
+// 			str[i] === 'f' ||
+// 			str[i] === 'g' ||
+// 			str[i] === 'h' ||
+// 			str[i] === 'i' ||
+// 			str[i] === 'j' ||
+// 			str[i] === 'k' ||
+// 			str[i] === 'l' ||
+// 			str[i] === 'm'
+// 		) {
+// 			x += 1
+// 		} else {
+// 			x = x
+// 		}
+// 	let error = str.length - x
+// 	return `${error}/${str.length}`
+// }
 
-console.log(printerError('aaaxbbbbyyhwawiwjjjwwm'))
+// console.log(printerError('aaaxbbbbyyhwawiwjjjwwm'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 29MAY24///////////////////////////////
+
+//TASK
+// Can you find the needle in the haystack?
+
+// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+// After your function finds the needle it should return a message (as a string) that says:
+
+// "found the needle at position " plus the index it found the needle, so:
+
+// Example(Input --> Output)
+
+// ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
+// Note: In COBOL, it should return "found the needle at position 6"
+
+//PSEUDOCODE
+// Get haystack, findIndexOf()
+// Use template literal `` to return the required phrase
+
+//SOLUTION
+// function findNeedle(haystack) {
+// 	const needle = element => element === 'needle'
+// 	return `found the needle at position ${haystack.findIndex(needle)}`
+// }
+
+// console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
 
 // BEST SOLUTION
