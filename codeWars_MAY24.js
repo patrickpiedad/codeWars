@@ -1101,3 +1101,21 @@
 // console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 31MAY24///////////////////////////////
+
+//TASK
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+//PSEUDOCODE
+// get number
+// return conditional
+// if number % 2 === 0, return even
+// else, return odd
+
+//SOLUTION
+// let evenOrOdd = number => (number % 2 === 0 ? 'Even' : 'Odd')
+
+// console.log(evenOrOdd(407))
+
+// BEST SOLUTION
