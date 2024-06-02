@@ -70,3 +70,18 @@ function setAlarm(employed, vacation) {
 }
 
 // BEST SOLUTION
+
+//TASK
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+//PSEUDOCODE
+// Get input s
+// use s.replace('!', ''))
+
+//SOLUTION
+function removeExclamationMarks(s) {
+	return s.replaceAll('!', '')
+}
+
+console.log(removeExclamationMarks('that is amazing!'))
+// BEST SOLUTION
