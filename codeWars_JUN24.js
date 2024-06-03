@@ -57,17 +57,17 @@
 // complete for the rest of the options
 
 //SOLUTION
-function setAlarm(employed, vacation) {
-	if (employed === true && vacation === true) {
-		return false
-	} else if (employed === true && vacation === false) {
-		return true
-	} else if (employed === false && vacation === true) {
-		return false
-	} else if (employed === false && vacation === false) {
-		return false
-	}
-}
+// function setAlarm(employed, vacation) {
+// 	if (employed === true && vacation === true) {
+// 		return false
+// 	} else if (employed === true && vacation === false) {
+// 		return true
+// 	} else if (employed === false && vacation === true) {
+// 		return false
+// 	} else if (employed === false && vacation === false) {
+// 		return false
+// 	}
+// }
 
 // BEST SOLUTION
 
@@ -79,9 +79,23 @@ function setAlarm(employed, vacation) {
 // use s.replace('!', ''))
 
 //SOLUTION
-function removeExclamationMarks(s) {
-	return s.replaceAll('!', '')
-}
+// function removeExclamationMarks(s) {
+// 	return s.replaceAll('!', '')
+// }
 
-console.log(removeExclamationMarks('that is amazing!'))
+// console.log(removeExclamationMarks('that is amazing!'))
+// BEST SOLUTION
+
+///////////////////////////////codeWars 03JUN24///////////////////////////////
+
+//TASK
+// Implement a function which convert the given boolean value into its string representation.
+
+// Note: Only valid inputs will be given.
+
+//PSEUDOCODE
+
+//SOLUTION
+// const booleanToString = b => (b === true ? 'true' : 'false')
+
 // BEST SOLUTION
