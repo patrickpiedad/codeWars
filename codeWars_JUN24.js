@@ -157,3 +157,53 @@
 // }
 
 // BEST SOLUTION
+
+//TASK
+// Count the number of Duplicates
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits
+// that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+// Example
+// "abcde" -> 0 # no characters repeats more than once
+// "aabbcde" -> 2 # 'a' and 'b'
+// "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+// "indivisibility" -> 1 # 'i' occurs six times
+// "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+// "aA11" -> 2 # 'a' and '1'
+// "ABBA" -> 2 # 'A' and 'B' each occur twice
+
+//PSEUDOCODE
+// get text as input
+// break up string into array
+// create for loops to run through all characters
+// main for loop with compare all characters against the first character, if matches then iterate variable
+// secondary for loop in main will check the next letter
+
+//SOLUTION
+// function duplicateCount(text) {
+// 	let arr = text.split('')
+// 	for (let i = 1; i < arr.length; i++) {
+// 		let first = 0
+// 		if (arr[first] === arr[i]) {
+// 			first += 1
+// 		} else {
+// 			first = first
+// 		}
+// 		return first
+// 	}
+// }
+
+function duplicateCount(text) {
+	let arr = text.toLowerCase().split('').sort()
+	let duplArr = []
+
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === arr[i + 1] && !duplArr.includes(arr[i])) {
+			duplArr.push(arr[i])
+		}
+	}
+	return duplArr.length
+}
+
+console.log(duplicateCount('Indivisibilities'))
+// BEST SOLUTION
