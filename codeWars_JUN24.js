@@ -136,3 +136,24 @@
 // console.log(onlyEvens([1, 2, 3, 4, 5, 2]))
 // console.log(onlyEvens([7, 8, 1, 0, 2, 5]))
 // console.log(onlyEvens([11, 13, 15]))
+
+///////////////////////////////codeWars 04JUN24///////////////////////////////
+
+//TASK
+// Debugging sayHello function
+// The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+
+// Example output:
+
+// Hello, Mr. Spock
+
+//PSEUDOCODE
+// get name
+// return `Hello ${name}`, using template literal
+
+//SOLUTION
+// function sayHello(name) {
+// 	return `Hello, ${name}`
+// }
+
+// BEST SOLUTION
