@@ -250,3 +250,40 @@
 
 // BEST SOLUTION
 // const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+///////////////////////////////codeWars 06JUN24///////////////////////////////
+
+//TASK
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+//PSEUDOCODE
+// take s1 and s2
+// combine both strings into single array
+// sort array
+// remove duplicates
+// return
+
+//SOLUTION
+function longest(s1, s2) {
+	let ans = (s1 + s2).split('').sort()
+	let finArr = []
+	for (let i = 0; i < ans.length; i++) {
+		if (ans[i] !== ans[i + 1] && !finArr.includes(ans[i])) {
+			finArr.push(ans[i])
+		}
+	}
+	return finArr.join('')
+}
+
+console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'))
+
+// BEST SOLUTION
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
