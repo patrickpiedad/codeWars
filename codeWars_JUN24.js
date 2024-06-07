@@ -272,18 +272,60 @@
 // return
 
 //SOLUTION
-function longest(s1, s2) {
-	let ans = (s1 + s2).split('').sort()
-	let finArr = []
-	for (let i = 0; i < ans.length; i++) {
-		if (ans[i] !== ans[i + 1] && !finArr.includes(ans[i])) {
-			finArr.push(ans[i])
-		}
-	}
-	return finArr.join('')
-}
+// function longest(s1, s2) {
+// 	let ans = (s1 + s2).split('').sort()
+// 	let finArr = []
+// 	for (let i = 0; i < ans.length; i++) {
+// 		if (ans[i] !== ans[i + 1] && !finArr.includes(ans[i])) {
+// 			finArr.push(ans[i])
+// 		}
+// 	}
+// 	return finArr.join('')
+// }
 
-console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'))
+// console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'))
 
 // BEST SOLUTION
-const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
+// const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join('')
+
+///////////////////////////////codeWars 07JUN24///////////////////////////////
+
+//TASK
+// The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+// Examples
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))(("
+// Notes
+// Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+
+//PSEUDOCODE
+// get word, split into array using .split('')
+// use forEach loop and indexOf to get any values with duplicates
+// if duplicate, then change element to ), else change value to (
+// join array together and return
+
+//SOLUTION
+// function duplicateEncode(word) {
+// 	let arr = word.split('')
+// 	let newArr = []
+// 	console.log(arr) // word turned into array
+// 	for (let i = 0; i < arr.length; i++) {
+//         if (arr.has(arr[i]))
+//     }
+// }
+
+duplicateEncode('recede')
+
+// BEST SOLUTION
+// function duplicateEncode(word){
+//     return word
+//       .toLowerCase()
+//       .split('')
+//       .map( function (a, i, w) {
+//         return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+//       })
+//       .join('');
+//   }
