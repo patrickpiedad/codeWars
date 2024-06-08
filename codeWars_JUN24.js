@@ -351,25 +351,40 @@
 // else newarr.push(index[i])
 
 //SOLUTION
-var uniqueInOrder = function (iterable) {
-	let startArr = []
-	let newArr = []
-	if (typeof iterable === 'string') {
-		startArr = iterable.split('')
-	} else {
-		startArr = iterable
-	}
-	for (let i = 0; i < startArr.length; i++) {
-		if (startArr[i] !== startArr[i + 1]) {
-			newArr.push(startArr[i])
-		}
-	}
-	return newArr
-}
+// var uniqueInOrder = function (iterable) {
+// 	let startArr = []
+// 	let newArr = []
+// 	if (typeof iterable === 'string') {
+// 		startArr = iterable.split('')
+// 	} else {
+// 		startArr = iterable
+// 	}
+// 	for (let i = 0; i < startArr.length; i++) {
+// 		if (startArr[i] !== startArr[i + 1]) {
+// 			newArr.push(startArr[i])
+// 		}
+// 	}
+// 	return newArr
+// }
 
-console.log(uniqueInOrder([1, 2, 2, 3, 3]))
+// console.log(uniqueInOrder([1, 2, 2, 3, 3]))
 
 // BEST SOLUTION
 // var uniqueInOrder = function (iterable) {
 // 	return [...iterable].filter((a, i) => a !== iterable[i - 1])
 // }
+
+//TASK
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+
+// Array can contain numbers or strings. X can be either.
+
+// Return true if the array contains the value, false if not.
+
+//PSEUDOCODE
+
+//SOLUTION
+// let check = (a, x) => (a.includes(x) ? true : false)
+
+// BEST SOLUTION
+// const check = (a,x) => a.includes(x);
