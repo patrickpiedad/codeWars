@@ -317,7 +317,7 @@
 //     }
 // }
 
-duplicateEncode('recede')
+// duplicateEncode('recede')
 
 // BEST SOLUTION
 // function duplicateEncode(word){
@@ -329,3 +329,47 @@ duplicateEncode('recede')
 //       })
 //       .join('');
 //   }
+
+///////////////////////////////codeWars 08JUN24///////////////////////////////
+
+//TASK
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of
+//items without any elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+//PSEUDOCODE
+// keep original array or string, do not edit
+// if typeof iterable === 'string', iterable.split('')
+// for loop with conditional
+// newarr.push[index[i]]
+// if index[i] === index [i+1], i++
+// else newarr.push(index[i])
+
+//SOLUTION
+var uniqueInOrder = function (iterable) {
+	let startArr = []
+	let newArr = []
+	if (typeof iterable === 'string') {
+		startArr = iterable.split('')
+	} else {
+		startArr = iterable
+	}
+	for (let i = 0; i < startArr.length; i++) {
+		if (startArr[i] !== startArr[i + 1]) {
+			newArr.push(startArr[i])
+		}
+	}
+	return newArr
+}
+
+console.log(uniqueInOrder([1, 2, 2, 3, 3]))
+
+// BEST SOLUTION
+// var uniqueInOrder = function (iterable) {
+// 	return [...iterable].filter((a, i) => a !== iterable[i - 1])
+// }
