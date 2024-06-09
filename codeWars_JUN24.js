@@ -388,3 +388,29 @@
 
 // BEST SOLUTION
 // const check = (a,x) => a.includes(x);
+
+//TASK
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+//PSEUDOCODE
+
+//SOLUTION
+function findShort(s) {
+	let arr = s.split(' ')
+	console.log(arr)
+	console.log(arr[1].length)
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].length < arr[i + 1].length) {
+			arr.splice(arr[i + 1], 1)
+		} else {
+			arr.splice(arr[i], 1)
+		}
+	}
+	return arr[0]
+}
+
+console.log(findShort('the eggs are being cooked on the grill'))
+
+// BEST SOLUTION
