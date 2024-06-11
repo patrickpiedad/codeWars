@@ -397,13 +397,47 @@
 //PSEUDOCODE
 
 //SOLUTION
-function findShort(s) {
-	let arr = s.split(' ')
-	arr = arr.sort((a, b) => a.length - b.length)
-	console.log(arr)
-	return arr[0].length
-}
+// function findShort(s) {
+// 	let arr = s.split(' ')
+// 	arr = arr.sort((a, b) => a.length - b.length)
+// 	console.log(arr)
+// 	return arr[0].length
+// }
 
-console.log(findShort('the eggs are being cooked on the grill'))
+// console.log(findShort('the eggs are being cooked on the grill'))
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 11JUN2024///////////////////////////////
+
+//TASK
+// Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+// Examples: (Input --> Output)
+
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+//PSEUDOCODE
+// get array input
+// loop through array, replace array[i] with 1: array[i]
+// return array
+
+//SOLUTION
+// var number = function (array) {
+// 	let newArr = []
+// 	for (let i = 0; i < array.length; i++) {
+// 		newArr[i] = `${i + 1}: ${array[i]}`
+// 	}
+// 	return newArr
+// }
+
+// console.log(number(['a', 'b', 'c']))
+// console.log(number([]))
+
+// BEST SOLUTION
+// let number = (a) => a.map((v, i) => `${i + 1}: ${v}`)
