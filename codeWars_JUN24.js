@@ -441,3 +441,66 @@
 
 // BEST SOLUTION
 // let number = (a) => a.map((v, i) => `${i + 1}: ${v}`)
+
+///////////////////////////////cassidoo Interview Question of the Week 10JUN24///////////////////////////////
+
+//TASK
+//Write a function that takes an array of integers and a target sum, and returns all unique quadruplets [a, b, c, d] in the array such that a + b + c + d = target.
+//If it's impossible, return an empty array.
+
+// Example:
+
+// > fourSum([1, 0, -1, 0, -2, 2], 0)
+// > [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
+
+// > fourSum([], 0)
+// > []
+
+// > fourSum([1, -2, -5, -4, -3, 3, 3, 5], -11)
+// > [[-5, -4, -3, 1]]
+
+//PSEUDOCODE
+// get array of numbers and target sum
+// conditional statements
+
+//SOLUTION
+
+///////////////////////////////codeWars 12JUN24///////////////////////////////
+
+//TASK
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+//PSEUDOCODE
+// loop through string
+// conditional using unicode characters (65 - 90 is uppercase unicode), if charCodeAt is 65-90, then its uppercase
+// if uppercase, then substr is 0 through i, then substr is i+1 through full .length-1
+
+//SOLUTION
+function solution(string) {
+	for (let i = 0; i < string.length; i++) {
+		arr = string.split('')
+		if (arr[i] === arr[i].toUpperCase) {
+			arr[i] = ' ' + arr[i]
+		}
+	}
+	return arr.join('')
+}
+
+// function solution(string) {
+//     string = string.split('').map(function (el) {
+//       if (el === el.toUpperCase()) {
+//         el = ' ' + el
+//       }
+//       return el
+//     })
+//     return string.join('')
+//   }
+
+console.log(solution('camelCasing'))
+
+// BEST SOLUTION
