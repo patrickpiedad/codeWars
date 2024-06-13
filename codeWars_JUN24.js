@@ -481,26 +481,40 @@
 // if uppercase, then substr is 0 through i, then substr is i+1 through full .length-1
 
 //SOLUTION
-function solution(string) {
-	for (let i = 0; i < string.length; i++) {
-		arr = string.split('')
-		if (arr[i] === arr[i].toUpperCase) {
-			arr[i] = ' ' + arr[i]
-		}
-	}
-	return arr.join('')
-}
+// function solution(string) {
+// 	for (let i = 0; i < string.length; i++) {
+// 		arr = string.split('')
+// 		if (arr[i] === arr[i].toUpperCase) {
+// 			arr[i] = ' ' + arr[i]
+// 		}
+// 	}
+// 	return arr.join('')
+// }
 
 // function solution(string) {
-//     string = string.split('').map(function (el) {
-//       if (el === el.toUpperCase()) {
-//         el = ' ' + el
-//       }
-//       return el
-//     })
-//     return string.join('')
-//   }
+// 	string = string.split('').map(function (el) {
+// 		if (el === el.toUpperCase()) {
+// 			el = ' ' + el
+// 		}
+// 		return el
+// 	})
+// 	return string.join('')
+// }
 
-console.log(solution('camelCasing'))
+// console.log(solution('camelCasing'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 13JUN2024///////////////////////////////
+
+//TASK
+// Code as fast as you can! You need to double the integer and return it.
+
+//PSEUDOCODE
+
+//SOLUTION
+// function doubleInteger(i) {
+//     return i*2;
+//   }
 
 // BEST SOLUTION
