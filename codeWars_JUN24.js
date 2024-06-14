@@ -532,13 +532,35 @@
 
 //PSEUDOCODE
 // get array
-// use spread operator and .set method to get unique values
+// if first element matches with second element, do not add to new array
+// if first element does not match with second element, and new array does not have second element, add to new array
+// if first element is not in new array, add to new array
 
 //SOLUTION
+let uniqueArr = []
+let newI
 function stray(numbers) {
-	return [...new Set(numbers)]
+	for (let i = 0; i < numbers.length - 1; i++) {
+		if (numbers[i] === numbers[i + 1]) {
+			continue
+		} else if (numbers[i] !== numbers[i + 1] && !uniqueArr.includes(numbers[i + 1])) {
+			newI = i
+			for (i = i; i < numbers.length - 1; i++) {
+				if (numbers[newI] === numbers[i + 1]) {
+					continue
+				} else if (numbers[newI] !== numbers[i + 1]) {
+					uniqueArr.push(numbers[i + 1])
+				}
+			}
+		} else if (!uniqueArr.includes(numbers[i])) {
+			uniqueArr.push(numbers[i])
+		}
+	}
+	return uniqueArr[0]
 }
 
 console.log(stray([17, 17, 3, 17, 17, 17, 17, 17]))
 
 // BEST SOLUTION
+
+// 	return [...new Set(numbers)]
