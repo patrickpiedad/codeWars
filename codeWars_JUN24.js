@@ -537,30 +537,21 @@
 // if first element is not in new array, add to new array
 
 //SOLUTION
-let uniqueArr = []
-let newI
-function stray(numbers) {
-	for (let i = 0; i < numbers.length - 1; i++) {
-		if (numbers[i] === numbers[i + 1]) {
-			continue
-		} else if (numbers[i] !== numbers[i + 1] && !uniqueArr.includes(numbers[i + 1])) {
-			newI = i
-			for (i = i; i < numbers.length - 1; i++) {
-				if (numbers[newI] === numbers[i + 1]) {
-					continue
-				} else if (numbers[newI] !== numbers[i + 1]) {
-					uniqueArr.push(numbers[i + 1])
-				}
-			}
-		} else if (!uniqueArr.includes(numbers[i])) {
-			uniqueArr.push(numbers[i])
-		}
-	}
-	return uniqueArr[0]
-}
+// function stray(numbers) {
+// 	for (let i = 0; i < numbers.length; i++) {
+// 		if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])) {
+// 			return numbers[i]
+// 		}
+// 	}
+// }
 
-console.log(stray([17, 17, 3, 17, 17, 17, 17, 17]))
+// console.log(stray([17, 17, 3, 17, 17, 17, 17, 17]))
 
 // BEST SOLUTION
-
-// 	return [...new Set(numbers)]
+// function stray(numbers) {
+// 	for (var i in numbers) {
+// 		if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])) {
+// 			return numbers[i]
+// 		}
+// 	}
+// }
