@@ -612,18 +612,63 @@
 //PSEUDOCODE
 
 //SOLUTION
-const countSheep = function (num) {
-	let string = ''
-	if (num === 0) {
-		return ''
-	} else {
-		for (let i = 1; i <= num; i++) {
-			string += `${i} sheep...`
+// const countSheep = function (num) {
+// 	let string = ''
+// 	if (num === 0) {
+// 		return ''
+// 	} else {
+// 		for (let i = 1; i <= num; i++) {
+// 			string += `${i} sheep...`
+// 		}
+// 		return string
+// 	}
+// }
+
+// console.log(countSheep(4))
+
+// BEST SOLUTION
+
+///////////////////////////////cassidoo Interview Question of the Week June 17th, 2024///////////////////////////////
+
+//TASK
+// Last week, I had you find a sum of four numbers in an array. Awesome job Muhammad, Sean, Amine, Ricardo, Nikhil, Ten, John, and Vyaas!
+
+// This week's question:
+// Write a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
+
+// Example:
+
+// > sortNames(["Goku", "Vegeta", "Piccolo", "Gohan"])
+// > ["Piccolo", "Vegeta", "Gohan", "Goku"]
+
+// > sortNames(["Edward", "Alphonse", "Roy", "Winry"])
+// > ["Alphonse", "Edward", "Winry", "Roy"]
+
+//PSEUDOCODE
+// get array
+// create function to count number of vowels in the word
+// push array elements to new array paired with number of vowels per word
+// sort based on vowels, then based on alphabetical order
+
+//SOLUTION
+let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+const newArr = names.map(elem => elem.toLowerCase())
+console.log(newArr)
+
+const numVowels = arr => {
+	let vowelCount
+	let vowelCountArr = []
+	arr.forEach(string => {
+		for (let i = 0; i < string.length; i++) {
+			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+				vowelCount++
+				vowelCountArr.push([arr[i], vowelCount])
+			}
 		}
-		return string
-	}
+		return vowelCountArr
+	})
 }
 
-console.log(countSheep(4))
+console.log(numVowels(newArr))
 
 // BEST SOLUTION
