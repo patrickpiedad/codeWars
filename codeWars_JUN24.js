@@ -651,24 +651,40 @@
 // sort based on vowels, then based on alphabetical order
 
 //SOLUTION
-let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-const newArr = names.map(elem => elem.toLowerCase())
-console.log(newArr)
+// let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+// const newArr = names.map(elem => elem.toLowerCase())
+// console.log(newArr)
 
-const numVowels = arr => {
-	let vowelCount
-	let vowelCountArr = []
-	arr.forEach(string => {
-		for (let i = 0; i < string.length; i++) {
-			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
-				vowelCount++
-				vowelCountArr.push([arr[i], vowelCount])
-			}
-		}
-		return vowelCountArr
-	})
-}
+// const numVowels = arr => {
+// 	let vowelCount
+// 	let vowelCountArr = []
+// 	arr.forEach(string => {
+// 		for (let i = 0; i < string.length; i++) {
+// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+// 				vowelCount++
+// 				vowelCountArr.push([arr[i], vowelCount])
+// 			}
+// 		}
+// 		return vowelCountArr
+// 	})
+// }
 
-console.log(numVowels(newArr))
+// console.log(numVowels(newArr))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 18JUN2024///////////////////////////////
+
+//TASK
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+//PSEUDOCODE
+// get name from function parameter
+// use template literal, change to arrow function
+
+//SOLUTION
+const greet = name => `Hello, ${name} how are you doing today?`
 
 // BEST SOLUTION
