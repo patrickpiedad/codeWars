@@ -671,6 +671,92 @@
 
 // console.log(numVowels(newArr))
 
+// let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+// const newArr = names.map(elem => elem.toLowerCase())
+// console.log
+
+// const numVowels = arr => {
+// 	let vowelCount = 0
+// 	let vowelCountArr = []
+// 	arr.forEach(string => {
+// 		for (let i = 0; i < string.length; i++) {
+// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+// 				vowelCount++
+// 				console.log(vowelCount)
+// 			}
+// 			vowelCountArr.push(vowelCount)
+// 			console.log(vowelCount)
+// 		}
+// 		return vowelCountArr
+// 	})
+// }
+
+// console.log(numVowels(newArr))
+
+let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+const newArr = names.map(elem => elem.toLowerCase())
+console.log
+
+const numVowels = arr => {
+	let vowelCount = 0
+	let vowelCountArr = []
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < arr[i].length; j++) {
+			if (arr[i][j] === 'a' || arr[i][j] === 'e' || arr[i][j] === 'i' || arr[i][j] === 'o' || arr[i][j] === 'u') {
+				vowelCount++
+			}
+			console.log(vowelCount)
+		}
+		vowelCountArr.push(vowelCount)
+		// return vowelCount
+	}
+	console.log(vowelCount)
+	return vowelCountArr
+}
+console.log(numVowels(newArr))
+
+// 	arr.forEach(string => {
+// 		for (let i = 0; i < string.length; i++) {
+// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+// 				vowelCount++
+// 				console.log(vowelCount)
+// 			}
+// 			vowelCountArr.push(vowelCount)
+// 			console.log(vowelCount)
+// 		}
+// 		return vowelCountArr
+// 	})
+// }
+
+//vowel counter
+// function getVowelCount(str) {
+// 	let vowelsCount = 0
+// 	let vowels = ['a', 'e', 'i', 'o', 'u']
+// 	for (let i = 0; i < str.length; i++) {
+// 		for (let j = 0; j < vowels.length; j++) {
+// 			if (str[i] === vowels[j]) {
+// 				vowelsCount++
+// 			}
+// 		}
+// 	}
+// }
+
+///
+// key value pair creation
+function pushToObj(arr) {
+	let values = [1, 2, 3]
+	let obj = {}
+
+	for (let i = 0; i < arr.length; i++) {
+		obj[arr[i]] = values[i]
+	}
+	return obj
+}
+
+var arr = ['one', 'two', 'three']
+
+console.log(pushToObj(arr))
+
 // BEST SOLUTION
 
 ///////////////////////////////codeWars 18JUN2024///////////////////////////////
@@ -715,9 +801,9 @@
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
 //PSEUDOCODE
-function getAge(inputString) {
-	return Number(inputString[0])
-}
+// function getAge(inputString) {
+// 	return Number(inputString[0])
+// }
 
 //SOLUTION
 
