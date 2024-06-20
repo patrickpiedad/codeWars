@@ -651,84 +651,35 @@
 // sort based on vowels, then based on alphabetical order
 
 //SOLUTION
-// let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-// const newArr = names.map(elem => elem.toLowerCase())
-// console.log(newArr)
 
-// const numVowels = arr => {
-// 	let vowelCount
-// 	let vowelCountArr = []
-// 	arr.forEach(string => {
-// 		for (let i = 0; i < string.length; i++) {
-// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
-// 				vowelCount++
-// 				vowelCountArr.push([arr[i], vowelCount])
-// 			}
-// 		}
-// 		return vowelCountArr
-// 	})
-// }
-
-// console.log(numVowels(newArr))
+// start //
 
 // let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
 // const newArr = names.map(elem => elem.toLowerCase())
 // console.log
 
+// array vowel counter //
+
 // const numVowels = arr => {
 // 	let vowelCount = 0
 // 	let vowelCountArr = []
-// 	arr.forEach(string => {
-// 		for (let i = 0; i < string.length; i++) {
-// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		for (let j = 0; j < arr[i].length; j++) {
+// 			if (arr[i][j] === 'a' || arr[i][j] === 'e' || arr[i][j] === 'i' || arr[i][j] === 'o' || arr[i][j] === 'u') {
 // 				vowelCount++
-// 				console.log(vowelCount)
 // 			}
-// 			vowelCountArr.push(vowelCount)
 // 			console.log(vowelCount)
 // 		}
-// 		return vowelCountArr
-// 	})
+// 		vowelCountArr.push(vowelCount)
+// 		// return vowelCount
+// 	}
+// 	console.log(vowelCount)
+// 	return vowelCountArr
 // }
-
 // console.log(numVowels(newArr))
 
-let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-const newArr = names.map(elem => elem.toLowerCase())
-console.log
+// string vowel counter//
 
-const numVowels = arr => {
-	let vowelCount = 0
-	let vowelCountArr = []
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < arr[i].length; j++) {
-			if (arr[i][j] === 'a' || arr[i][j] === 'e' || arr[i][j] === 'i' || arr[i][j] === 'o' || arr[i][j] === 'u') {
-				vowelCount++
-			}
-			console.log(vowelCount)
-		}
-		vowelCountArr.push(vowelCount)
-		// return vowelCount
-	}
-	console.log(vowelCount)
-	return vowelCountArr
-}
-console.log(numVowels(newArr))
-
-// 	arr.forEach(string => {
-// 		for (let i = 0; i < string.length; i++) {
-// 			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
-// 				vowelCount++
-// 				console.log(vowelCount)
-// 			}
-// 			vowelCountArr.push(vowelCount)
-// 			console.log(vowelCount)
-// 		}
-// 		return vowelCountArr
-// 	})
-// }
-
-//vowel counter
 // function getVowelCount(str) {
 // 	let vowelsCount = 0
 // 	let vowels = ['a', 'e', 'i', 'o', 'u']
@@ -741,21 +692,21 @@ console.log(numVowels(newArr))
 // 	}
 // }
 
-///
-// key value pair creation
-function pushToObj(arr) {
-	let values = [1, 2, 3]
-	let obj = {}
+// key value pair creation//
 
-	for (let i = 0; i < arr.length; i++) {
-		obj[arr[i]] = values[i]
-	}
-	return obj
-}
+// function pushToObj(arr) {
+// 	let values = [1, 2, 3]
+// 	let obj = {}
 
-var arr = ['one', 'two', 'three']
+// 	for (let i = 0; i < arr.length; i++) {
+// 		obj[arr[i]] = values[i]
+// 	}
+// 	return obj
+// }
 
-console.log(pushToObj(arr))
+// var arr = ['one', 'two', 'three']
+
+// console.log(pushToObj(arr))
 
 // BEST SOLUTION
 
@@ -806,5 +757,35 @@ console.log(pushToObj(arr))
 // }
 
 //SOLUTION
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 20JUN2024///////////////////////////////
+
+//TASK
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+//PSEUDOCODE
+// get array input
+// .split on string to break into array
+// reverse on array
+// join
+
+//SOLUTION
+function reverseWords(str) {
+	str = str.split(' ')
+	console.log(str)
+	let str2 = str.map(x => x.split('').reverse())
+	console.log(str2)
+	let str3 = str2.map(x => x.join(''))
+	console.log(str3)
+	return str3.join(' ')
+}
+
+console.log(reverseWords('This is an example!'))
 
 // BEST SOLUTION
