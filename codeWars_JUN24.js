@@ -776,16 +776,50 @@
 // join
 
 //SOLUTION
-function reverseWords(str) {
-	str = str.split(' ')
-	console.log(str)
-	let str2 = str.map(x => x.split('').reverse())
-	console.log(str2)
-	let str3 = str2.map(x => x.join(''))
-	console.log(str3)
-	return str3.join(' ')
+// function reverseWords(str) {
+// 	str = str.split(' ')
+// 	console.log(str)
+// 	let str2 = str.map(x => x.split('').reverse())
+// 	console.log(str2)
+// 	let str3 = str2.map(x => x.join(''))
+// 	console.log(str3)
+// 	return str3.join(' ')
+// }
+
+// console.log(reverseWords('This is an example!'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 21JUN2024///////////////////////////////
+
+//TASK
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+//PSEUDOCODE
+// function will take in 'pin' as a parameter
+// pin will go through a conditional. if pin.length is === 4 OR 6 AND is a number, then return true
+// else, return false
+
+//SOLUTION
+function checkIfDigit(num) {
+	return num >= '0' && num <= '9'
 }
 
-console.log(reverseWords('This is an example!'))
+function validatePIN(pin) {
+	if ((pin.toString().length === 4 || pin.toString().length === 6) && pin.split('').every(checkIfDigit) === true) {
+		return true
+	} else {
+		return false
+	}
+}
+
+console.log(validatePIN('4251'))
 
 // BEST SOLUTION
