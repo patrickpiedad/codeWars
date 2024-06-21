@@ -631,8 +631,6 @@
 ///////////////////////////////cassidoo Interview Question of the Week June 17th, 2024///////////////////////////////
 
 //TASK
-// Last week, I had you find a sum of four numbers in an array. Awesome job Muhammad, Sean, Amine, Ricardo, Nikhil, Ten, John, and Vyaas!
-
 // This week's question:
 // Write a function that takes a list of names and returns the names sorted by the number of vowels in each name in descending order. If two names have the same number of vowels, sort them alphabetically.
 
@@ -654,59 +652,62 @@
 
 // start //
 
-// let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-// const newArr = names.map(elem => elem.toLowerCase())
-// console.log
+let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+const newArr = names.map(elem => elem.toLowerCase())
+console.log(newArr)
 
 // array vowel counter //
 
-// const numVowels = arr => {
-// 	let vowelCount = 0
-// 	let vowelCountArr = []
-// 	for (let i = 0; i < arr.length; i++) {
-// 		for (let j = 0; j < arr[i].length; j++) {
-// 			if (arr[i][j] === 'a' || arr[i][j] === 'e' || arr[i][j] === 'i' || arr[i][j] === 'o' || arr[i][j] === 'u') {
-// 				vowelCount++
-// 			}
-// 			console.log(vowelCount)
-// 		}
-// 		vowelCountArr.push(vowelCount)
-// 		// return vowelCount
-// 	}
-// 	console.log(vowelCount)
-// 	return vowelCountArr
-// }
-// console.log(numVowels(newArr))
+const numVowels = arr => {
+	let vowelCount = 0
+	let vowelCountArr = []
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j <= arr[i].length; j++) {
+			if (j === arr[i].length) {
+				vowelCountArr.push(vowelCount)
+				vowelCount = 0
+			} else if (arr[i][j] === 'a' || arr[i][j] === 'e' || arr[i][j] === 'i' || arr[i][j] === 'o' || arr[i][j] === 'u') {
+				vowelCount++
+			}
+		}
+	}
+	return vowelCountArr
+}
+console.log(numVowels(newArr))
+let vowelCountArrGlobal = numVowels(newArr)
 
-// string vowel counter//
+// key value pair creation
 
-// function getVowelCount(str) {
-// 	let vowelsCount = 0
-// 	let vowels = ['a', 'e', 'i', 'o', 'u']
-// 	for (let i = 0; i < str.length; i++) {
-// 		for (let j = 0; j < vowels.length; j++) {
-// 			if (str[i] === vowels[j]) {
-// 				vowelsCount++
-// 			}
-// 		}
-// 	}
-// }
+function pushToObj(arr) {
+	let obj = {}
+	for (let i = 0; i < newArr.length; i++) {
+		obj[newArr[i]] = numVowels(newArr)[i]
+	}
+	return obj
+}
 
-// key value pair creation//
+let completeObj = pushToObj(newArr)
 
-// function pushToObj(arr) {
-// 	let values = [1, 2, 3]
-// 	let obj = {}
+console.log(completeObj)
+console.log(Object.values(completeObj)[0])
+console.log(Object.keys(completeObj).length)
+console.log(Object.keys(completeObj)[3])
 
-// 	for (let i = 0; i < arr.length; i++) {
-// 		obj[arr[i]] = values[i]
-// 	}
-// 	return obj
-// }
-
-// var arr = ['one', 'two', 'three']
-
-// console.log(pushToObj(arr))
+// sort function
+let completeArr = []
+function sortThings(anyObj) {
+	for (let i = 0; i < Object.keys(anyObj).length; i++) {
+		if (Object.values(anyObj)[i] > Object.values(anyObj)[i + 1]) {
+			completeArr.push(Object.keys(anyObj)[i])
+		} else if (Object.values(anyObj)[i] === Object.values(anyObj)[i + 1]) {
+			completeArr.push(Object.keys(anyObj)[i]) // fix to sort by alphabetical order
+		} else {
+			completeArr.push(Object.keys(anyObj)[i + 1])
+		}
+	}
+	return completeArr
+}
+console.log(sortThings(completeObj))
 
 // BEST SOLUTION
 
@@ -808,18 +809,20 @@
 // else, return false
 
 //SOLUTION
-function checkIfDigit(num) {
-	return num >= '0' && num <= '9'
-}
+// function checkIfDigit(num) {
+// 	return num >= '0' && num <= '9'
+// }
 
-function validatePIN(pin) {
-	if ((pin.toString().length === 4 || pin.toString().length === 6) && pin.split('').every(checkIfDigit) === true) {
-		return true
-	} else {
-		return false
-	}
-}
+// function validatePIN(pin) {
+// 	if ((pin.toString().length === 4 || pin.toString().length === 6) && pin.split('').every(checkIfDigit) === true) {
+// 		return true
+// 	} else {
+// 		return false
+// 	}
+// }
 
-console.log(validatePIN('4251'))
+// console.log(validatePIN('4251'))
 
 // BEST SOLUTION
+
+// Learning OOP with Mosh//
