@@ -652,8 +652,8 @@
 
 // start solution
 function sortByVowelCountThenAlphabet(arr) {
-	// sort initial array alphabetically to set base as alphabetically sorted descending (like the numbers will be later)
-	let alphaArr = arr.sort().reverse()
+	// sort initial array alphabetically to set base as alphabetically sorted (a through z)
+	let alphaArr = arr.sort()
 	console.log(alphaArr)
 
 	// count number of vowels in each name
@@ -701,7 +701,8 @@ function sortByVowelCountThenAlphabet(arr) {
 	return finalAnswer
 }
 
-console.log(sortByVowelCountThenAlphabet(['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias', 'Eduardorito']))
+console.log(sortByVowelCountThenAlphabet(['Goku', 'Vegeta', 'Piccolo', 'Gohan']))
+console.log(sortByVowelCountThenAlphabet(['Edward', 'Alphonse', 'Roy', 'Winry']))
 
 // end solution
 
