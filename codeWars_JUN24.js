@@ -652,8 +652,11 @@
 
 // start //
 
-let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-const newArr = names.map(elem => elem.toLowerCase())
+// make array all lowercase, then sort alphabetically
+// let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
+let names = ['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias']
+let newArr = names.sort()
+// const newArr = names.map(elem => elem.toLowerCase()).sort()
 console.log(newArr)
 
 // array vowel counter //
@@ -673,41 +676,58 @@ const numVowels = arr => {
 	}
 	return vowelCountArr
 }
+let vowels = numVowels(newArr)
 console.log(numVowels(newArr))
-let vowelCountArrGlobal = numVowels(newArr)
 
-// key value pair creation
+// key value pair creation as objects inside an array
+let combinedPairs = newArr.map(function (arr1, arr2) {
+	return { name: arr1, vowels: vowels[arr2] }
+})
+console.log(combinedPairs)
 
-function pushToObj(arr) {
-	let obj = {}
-	for (let i = 0; i < newArr.length; i++) {
-		obj[newArr[i]] = numVowels(newArr)[i]
-	}
-	return obj
+// function pushToObj(arr) {
+// 	let obj = {}
+// 	for (let i = 0; i < newArr.length; i++) {
+// 		obj[newArr[i]] = numVowels(newArr)[i]
+// 	}
+// 	return obj
+// }
+
+// let completeObj = pushToObj(newArr)
+// console.log(completeObj)
+
+// let completeArr = newArr.map(function (name, num) {
+// 	return [name, vowels[num]]
+// })
+
+// sort by number (already in alphabetical from beginning sort)
+function sortThings(arr) {
+	return arr.sort((a, b) => b.vowels - a.vowels)
 }
 
-let completeObj = pushToObj(newArr)
+console.log(sortThings(combinedPairs))
 
-console.log(completeObj)
-console.log(Object.values(completeObj)[0])
-console.log(Object.keys(completeObj).length)
-console.log(Object.keys(completeObj)[3])
-
-// sort function
-let completeArr = []
-function sortThings(anyObj) {
-	for (let i = 0; i < Object.keys(anyObj).length; i++) {
-		if (Object.values(anyObj)[i] > Object.values(anyObj)[i + 1]) {
-			completeArr.push(Object.keys(anyObj)[i])
-		} else if (Object.values(anyObj)[i] === Object.values(anyObj)[i + 1]) {
-			completeArr.push(Object.keys(anyObj)[i]) // fix to sort by alphabetical order
-		} else {
-			completeArr.push(Object.keys(anyObj)[i + 1])
-		}
-	}
-	return completeArr
+// create final array with only names
+let ans = []
+for (let i = 0; i < Object.entries(combinedPairs).length; i++) {
+	ans.push(combinedPairs[i].name)
 }
-console.log(sortThings(completeObj))
+
+console.log(ans)
+
+// function sortThings(anyObj) {
+// 	for (let i = 0; i < Object.keys(anyObj).length; i++) {
+// 		if (Object.values(anyObj)[i] > Object.values(anyObj)[i + 1]) {
+// 			completeArr.push(Object.keys(anyObj)[i])
+// 		} else if (Object.values(anyObj)[i] === Object.values(anyObj)[i + 1]) {
+// 			completeArr.push(Object.keys(anyObj)[i])
+// 		} else {
+// 			completeArr.push(Object.keys(anyObj)[i + 1])
+// 		}
+// 	}
+// 	return completeArr
+// }
+// console.log(sortThings(completeObj))
 
 // BEST SOLUTION
 
