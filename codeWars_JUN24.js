@@ -689,7 +689,6 @@ function sortByVowelCountThenAlphabet(arr) {
 	console.log(combinedPairs)
 
 	// sort combinedPairs by number of vowels descending. If number of vowels are the same, nothing will happen and it will stay in alphabetical order
-	// sort by number (already in alphabetical from beginning sort)
 	let combinedPairsSorted = combinedPairs.sort((a, b) => b.vowels - a.vowels)
 	console.log(sortThings(combinedPairsSorted))
 
