@@ -650,11 +650,56 @@
 
 //SOLUTION
 
-// start //
+// start solution
+function sortByVowelCountThenAlphabet(arr) {
+	// sort initial array alphabetically to set base as alphabetically sorted
+	let alphaArr = arr.sort()
+	console.log(alphaArr)
+
+	// count number of vowels in each name
+	let vowelCount = 0
+	let vowelCountArr = []
+	for (let i = 0; i < alphaArr.length; i++) {
+		for (let j = 0; j <= alphaArr[i].length; j++) {
+			if (j === alphaArr[i].length) {
+				vowelCountArr.push(vowelCount)
+				vowelCount = 0
+			} else if (alphaArr[i][j] === 'a' || alphaArr[i][j] === 'e' || alphaArr[i][j] === 'i' || alphaArr[i][j] === 'o' || alphaArr[i][j] === 'u') {
+				vowelCount++
+			}
+		}
+	}
+	console.log(vowelCountArr)
+
+	// key value pair creation as objects inside an array
+	let combinedPairs = alphaArr.map(function (arr1, arr2) {
+		return { name: arr1, vowels: vowelCountArr[arr2] }
+	})
+	console.log(combinedPairs)
+
+	// sort combinedPairs by number of vowels. If number of vowels are the same, nothing will happen and it will stay in alphabetical order
+	// sort by number (already in alphabetical from beginning sort)
+	let combinedPairsSorted = combinedPairs.sort((a, b) => b.vowels - a.vowels)
+	console.log(sortThings(combinedPairsSorted))
+
+	// take name from each object in combinedPairSorted, in order, and push to final answer array
+	let finalAnswer = []
+	for (let i = 0; i < Object.entries(combinedPairsSorted).length; i++) {
+		finalAnswer.push(combinedPairsSorted[i].name)
+	}
+
+	return finalAnswer
+}
+
+// end solution
+
+// scratch sheet
+
+console.log(sortByVowelCountThenAlphabet(['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias', 'Eduardorito']))
 
 // make array all lowercase, then sort alphabetically
 // let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
-let names = ['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias']
+
 let newArr = names.sort()
 // const newArr = names.map(elem => elem.toLowerCase()).sort()
 console.log(newArr)
