@@ -653,7 +653,7 @@
 // start solution
 function sortByVowelCountThenAlphabet(arr) {
 	// sort initial array alphabetically to set base as alphabetically sorted
-	let alphaArr = arr.sort()
+	let alphaArr = arr.sort().reverse()
 	console.log(alphaArr)
 
 	// count number of vowels in each name
@@ -664,7 +664,18 @@ function sortByVowelCountThenAlphabet(arr) {
 			if (j === alphaArr[i].length) {
 				vowelCountArr.push(vowelCount)
 				vowelCount = 0
-			} else if (alphaArr[i][j] === 'a' || alphaArr[i][j] === 'e' || alphaArr[i][j] === 'i' || alphaArr[i][j] === 'o' || alphaArr[i][j] === 'u') {
+			} else if (
+				alphaArr[i][j] === 'a' ||
+				alphaArr[i][j] === 'A' ||
+				alphaArr[i][j] === 'e' ||
+				alphaArr[i][j] === 'E' ||
+				alphaArr[i][j] === 'i' ||
+				alphaArr[i][j] === 'I' ||
+				alphaArr[i][j] === 'o' ||
+				alphaArr[i][j] === 'O' ||
+				alphaArr[i][j] === 'u' ||
+				alphaArr[i][j] === 'U'
+			) {
 				vowelCount++
 			}
 		}
@@ -691,11 +702,11 @@ function sortByVowelCountThenAlphabet(arr) {
 	return finalAnswer
 }
 
+console.log(sortByVowelCountThenAlphabet(['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias', 'Eduardorito']))
+
 // end solution
 
 // scratch sheet
-
-console.log(sortByVowelCountThenAlphabet(['Edward', 'Alphonse', 'Roy', 'Winry', 'Zacharias', 'Eduardorito']))
 
 // make array all lowercase, then sort alphabetically
 // let names = ['Goku', 'Vegeta', 'Piccolo', 'Gohan']
