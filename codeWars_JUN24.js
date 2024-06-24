@@ -733,3 +733,38 @@
 // console.log(correct('L0ND0N'))
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 24JUN2024///////////////////////////////
+
+//TASK
+// Welcome.
+
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+// If anything in the text isn't a letter, ignore it and don't return it.
+
+// "a" = 1, "b" = 2, etc.
+
+// Example
+// Input = "The sunset sets at twelve o' clock."
+// Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+
+//PSEUDOCODE
+
+//SOLUTION
+function alphabetPosition(text) {
+	textArray = text.split(' ')
+	console.log(textArray)
+	textArray = textArray.map(word => word.split(''))
+	console.log(textArray)
+	for (let i = 0; i < textArray.length; i++) {
+		if (textArray[i][i].toUpperCase() === textArray[i][i].toLowerCase()) {
+			textArray[i][i] = i + 1
+		}
+	}
+	return text
+}
+
+alphabetPosition("The sunset sets at twelve o' clock.")
+
+// BEST SOLUTION
