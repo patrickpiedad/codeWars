@@ -754,18 +754,20 @@
 // seperate string into array with single words as each element
 // seperate array of single words into multiple arrays of single letters
 // create function to manipulate each element in this array, use conditional to check if the element is a letter (use toUpperCase() === toLowerCase())
-//
+// if element is a letter, we need to replace that letter with its position in the alphabet, use charcount
 
 //SOLUTION
 function alphabetPosition(text) {
-	textArray = text.split(' ')
-	console.log(textArray)
-	textArray = textArray.map(word => word.split(''))
-	console.log(textArray)
-	console.log(textArray[0][0])
-	let test = textArray[0][0]
+	let ansArray = []
+	for (let i = 0; i < text.length; i++)
+		if (text.charCodeAt(i) > 64 && text.charCodeAt(i) < 91) {
+			ansArray.push(text.charCodeAt(i) - 64)
+		} else if (text.charCodeAt(i) > 96 && text.charCodeAt(i) < 123) {
+			ansArray.push(text.charCodeAt(i) - 96)
+		}
+	return ansArray.join(' ')
 }
 
-alphabetPosition("The sunset sets at twelve o' clock.")
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))
 
 // BEST SOLUTION
