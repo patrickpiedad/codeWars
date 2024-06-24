@@ -750,6 +750,11 @@
 // Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
 
 //PSEUDOCODE
+// receive array with string
+// seperate string into array with single words as each element
+// seperate array of single words into multiple arrays of single letters
+// create function to manipulate each element in this array, use conditional to check if the element is a letter (use toUpperCase() === toLowerCase())
+//
 
 //SOLUTION
 function alphabetPosition(text) {
@@ -757,12 +762,8 @@ function alphabetPosition(text) {
 	console.log(textArray)
 	textArray = textArray.map(word => word.split(''))
 	console.log(textArray)
-	for (let i = 0; i < textArray.length; i++) {
-		if (textArray[i][i].toUpperCase() === textArray[i][i].toLowerCase()) {
-			textArray[i][i] = i + 1
-		}
-	}
-	return text
+	console.log(textArray[0][0])
+	let test = textArray[0][0]
 }
 
 alphabetPosition("The sunset sets at twelve o' clock.")
