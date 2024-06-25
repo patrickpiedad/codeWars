@@ -757,17 +757,43 @@
 // if element is a letter, we need to replace that letter with its position in the alphabet, use charcount
 
 //SOLUTION
-function alphabetPosition(text) {
-	let ansArray = []
-	for (let i = 0; i < text.length; i++)
-		if (text.charCodeAt(i) > 64 && text.charCodeAt(i) < 91) {
-			ansArray.push(text.charCodeAt(i) - 64)
-		} else if (text.charCodeAt(i) > 96 && text.charCodeAt(i) < 123) {
-			ansArray.push(text.charCodeAt(i) - 96)
-		}
-	return ansArray.join(' ')
-}
+// function alphabetPosition(text) {
+// 	let ansArray = []
+// 	for (let i = 0; i < text.length; i++)
+// 		if (text.charCodeAt(i) > 64 && text.charCodeAt(i) < 91) {
+// 			ansArray.push(text.charCodeAt(i) - 64)
+// 		} else if (text.charCodeAt(i) > 96 && text.charCodeAt(i) < 123) {
+// 			ansArray.push(text.charCodeAt(i) - 96)
+// 		}
+// 	return ansArray.join(' ')
+// }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 25JUN2024///////////////////////////////
+
+//TASK
+// Messi goals function
+// Messi is a soccer player with goals in three leagues:
+
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the function to return his total number of goals in all three leagues.
+
+// Note: the input will always be valid.
+
+// For example:
+
+// 5, 10, 2  -->  17
+
+//PSEUDOCODE
+
+//SOLUTION
+// function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+// 	return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+// }
 
 // BEST SOLUTION
