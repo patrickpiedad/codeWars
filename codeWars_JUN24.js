@@ -819,16 +819,28 @@
 // return divisor count
 
 //SOLUTION
-function getDivisorsCnt(n) {
-	let divisorCount = 0
-	for (let i = 1; i <= n; i++) {
-		if (n % i === 0) {
-			divisorCount++
-		}
-	}
-	return divisorCount
+ 
+
+// BEST SOLUTION
+
+//TASK
+// Write a function that removes the spaces from the string, then return the resultant string.
+
+// Examples:
+
+// Input -> Output
+// "8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB"
+// "8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
+// "8aaaaa dddd r     " -> "8aaaaaddddr"
+
+
+//PSEUDOCODE
+
+//SOLUTION
+function noSpace(x){
+	return x.replaceAll(' ', '')
 }
 
-console.log(getDivisorsCnt())
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"))
 
 // BEST SOLUTION
