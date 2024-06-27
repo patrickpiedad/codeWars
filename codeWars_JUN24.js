@@ -819,7 +819,6 @@
 // return divisor count
 
 //SOLUTION
-<<<<<<< HEAD
  
 
 // BEST SOLUTION
@@ -834,7 +833,6 @@
 // "8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
 // "8aaaaa dddd r     " -> "8aaaaaddddr"
 
-=======
 // function getDivisorsCnt(n) {
 // 	let divisorCount = 0
 // 	for (let i = 1; i <= n; i++) {
@@ -855,12 +853,10 @@
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 // Note: input will never be an empty string
->>>>>>> 7d703ee (added 27JUN2024 codewars 8kyu)
 
 //PSEUDOCODE
 
 //SOLUTION
-<<<<<<< HEAD
 // function noSpace(x){
 // 	return x.replaceAll(' ', '')
 // }
@@ -870,7 +866,6 @@
 // BEST SOLUTION
 // function noSpace(x){
 // 	return x.replaceAll(' ', '')
-=======
 // function fakeBin(x) {
 // 	let ans = []
 // 	x.split('')
@@ -889,5 +884,4 @@
 // BEST SOLUTION
 // function fakeBin(x) {
 //     return x.split('').map(n => n < 5 ? 0 : 1).join('');
->>>>>>> 7d703ee (added 27JUN2024 codewars 8kyu)
 // }
