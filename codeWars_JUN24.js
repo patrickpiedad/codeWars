@@ -883,5 +883,4 @@
 // BEST SOLUTION
 // function fakeBin(x) {
 //     return x.split('').map(n => n < 5 ? 0 : 1).join('');
->>>>>>> 7d703ee (added 27JUN2024 codewars 8kyu)
 // }
