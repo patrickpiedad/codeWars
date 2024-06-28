@@ -900,24 +900,26 @@
 //PSEUDOCODE
 
 //SOLUTION
-function countPositivesSumNegatives(input) {
-	let posCount = 0
-	let negSum = 0
-	let newArr = []
-	if (input === null || input.reduce((acc, currVal) => acc + currVal, 0) === 0) {
-		return []
-	} else {
-		for (let i = 0; i < input.length; i++) {
-			if (input[i] > 0) {
-				posCount++
-			} else if (input[i] < 0) {
-				negSum += input[i]
-			}
-		}
-	}
-	newArr.push(posCount)
-	newArr.push(negSum)
-	return newArr
-}
+// function countPositivesSumNegatives(input) {
+// 	let posCount = 0
+// 	let negSum = 0
+// 	let newArr = []
+// 	if (input === null || input.length === 0) {
+// 		return []
+// 	} else {
+// 		for (let i = 0; i < input.length; i++) {
+// 			if (input[i] > 0) {
+// 				posCount++
+// 			} else if (input[i] < 0) {
+// 				negSum += input[i]
+// 			}
+// 		}
+// 	}
+// 	newArr.push(posCount)
+// 	newArr.push(negSum)
+// 	return newArr
+// }
+
+// console.log(countPositivesSumNegatives[[0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]])
 
 // BEST SOLUTION
