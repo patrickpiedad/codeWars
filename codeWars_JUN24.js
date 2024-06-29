@@ -923,3 +923,42 @@
 // console.log(countPositivesSumNegatives[[0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]])
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 29JUN2024///////////////////////////////
+
+//TASK
+// Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+// 1. "I love you"
+// 2. "a little"
+// 3. "a lot"
+// 4. "passionately"
+// 5. "madly"
+// 6. "not at all"
+
+// If there are more than 6 petals, you start over with "I love you" for 7 petals, "a little" for 8 petals and so on.
+
+// When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+
+// Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
+
+//PSEUDOCODE
+// get number of petals from function argument
+// if else for each petal - saying
+// 1. "I love you" , 1, 7, 13, 19, 25
+// 2. "a little", 2, 8, 14, 20
+// 3. "a lot", 3, 9, 15, 21
+// 4. "passionately", 4, 10, 16, 22
+// 5. "madly", 5, 11, 17, 23
+// 6. "not at all", 6, 12, 18, 24
+
+//SOLUTION
+function howMuchILoveYou(nbPetals) {
+	let sayings = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+	console.log((nbPetals - 1) % 6)
+	return sayings[(nbPetals - 1) % 6]
+}
+
+console.log(howMuchILoveYou(10))
+
+// BEST SOLUTION
