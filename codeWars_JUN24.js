@@ -953,12 +953,11 @@
 // 6. "not at all", 6, 12, 18, 24
 
 //SOLUTION
-function howMuchILoveYou(nbPetals) {
-	let sayings = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
-	console.log((nbPetals - 1) % 6)
-	return sayings[(nbPetals - 1) % 6]
-}
+// function howMuchILoveYou(nbPetals) {
+// 	let sayings = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+// 	return sayings[(nbPetals - 1) % 6]
+// }
 
-console.log(howMuchILoveYou(10))
+// console.log(howMuchILoveYou(10))
 
 // BEST SOLUTION
