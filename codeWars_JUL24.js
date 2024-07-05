@@ -149,3 +149,71 @@
 // let litres = time => Math.floor(0.5 * time)
 
 // BEST SOLUTION
+
+//TASK
+// Given the triangle of consecutive odd numbers:
+
+//              1
+//           3     5
+//        7     9    11
+//    13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+
+//PSEUDOCODE
+
+//SOLUTION
+// function rowSumOddNumbers(n) {
+// 	let arr = [[1], [3, 5], [7, 9, 11], [13, 15, 17, 19], [21, 23, 25, 27, 29]]
+// 	let finalSum = arr[n - 1].reduce((acc, curr) => acc + curr, 0)
+// 	return finalSum
+// }
+
+// console.log(rowSumOddNumbers(1))
+
+// // BEST SOLUTION
+// function rowSumOddNumbers(n) {
+// 	return Math.pow(n, 3)
+// }
+
+//TASK
+// Return an array containing the numbers from 1 to N, where N is the parametered value.
+
+// Replace certain values however if any of the following conditions are met:
+
+// If the value is a multiple of 3: use the value "Fizz" instead
+// If the value is a multiple of 5: use the value "Buzz" instead
+// If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
+// N will never be less than 1.
+
+// Method calling example:
+
+// fizzbuzz(3) -->  [1, 2, "Fizz"]
+
+//PSEUDOCODE
+
+//SOLUTION
+// Return an array
+function fizzbuzz(n) {
+	let arr = []
+	for (let i = 1; i <= n; i++) {
+		if (i % 3 === 0 && i % 5 === 0) {
+			arr.push('FizzBuzz')
+		} else if (i % 3 === 0) {
+			arr.push('Fizz')
+		} else if (i % 5 === 0) {
+			arr.push('Buzz')
+		} else {
+			arr.push(i)
+		}
+	}
+	return arr
+}
+
+fizzbuzz(30)
+
+// BEST SOLUTION
