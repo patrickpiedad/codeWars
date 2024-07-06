@@ -251,11 +251,69 @@
 // 	}
 // }
 
-let sum = numbers => (numbers === undefined ? 0 : numbers.reduce((acc, currVal) => acc + currVal, 0))
+// let sum = numbers => (numbers === undefined ? 0 : numbers.reduce((acc, currVal) => acc + currVal, 0))
 
-console.log(sum([]))
+// console.log(sum([]))
 
 // BEST SOLUTION
-function sum(numbers) {
-	return numbers.reduce((a, b) => a + b, 0)
+// function sum(numbers) {
+// 	return numbers.reduce((a, b) => a + b, 0)
+// }
+
+///////////////////////////////codeWars 06JUL2024///////////////////////////////
+
+//TASK
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+//PSEUDOCODE
+// nested for loop, iterate through each word (put into array), and check indexOf iterating through i which will look for word with 0, 1, 2, 3, 4, and push them in order
+// join array and return string
+
+//SOLUTION
+
+// function order(words) {
+// 	let arr = words.split(' ')
+// 	let sortArr = []
+// 	console.log(arr)
+// 	console.log(arr[0].indexOf(2))
+// 	for (let i = 0; i <= arr.length; i++) {
+// 		for (let j = 0; j < arr.length; j++) {
+// 			if (arr[j].indexOf(i) >= 0) {
+// 				sortArr.push(arr[j])
+// 			}
+// 		}
+// 	}
+// 	console.log(sortArr)
+// 	return sortArr.join(' ')
+// }
+
+function order(words) {
+	let arr = words.split(' ')
+	let sortArr = []
+	console.log(arr)
+	console.log(arr[3])
+	console.log(arr[1].indexOf(0))
+
+	for (let i = 0; i <= arr.length; i++) {
+		for (let j = 0; j < arr.length; j++) {
+			if (arr[j].indexOf(i) >= 0) {
+				sortArr.push(arr[j])
+			}
+		}
+	}
+	console.log(sortArr)
+	return sortArr.join(' ')
 }
+
+console.log(order('is2 Thi1s T4est 3a'))
+
+// BEST SOLUTION
