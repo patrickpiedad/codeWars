@@ -296,24 +296,42 @@
 // 	return sortArr.join(' ')
 // }
 
-function order(words) {
-	let arr = words.split(' ')
-	let sortArr = []
-	console.log(arr)
-	console.log(arr[3])
-	console.log(arr[1].indexOf(0))
+// function order(words) {
+// 	let arr = words.split(' ')
+// 	let sortArr = []
+// 	console.log(arr)
+// 	console.log(arr[3])
+// 	console.log(arr[1].indexOf(0))
 
-	for (let i = 0; i <= arr.length; i++) {
-		for (let j = 0; j < arr.length; j++) {
-			if (arr[j].indexOf(i) >= 0) {
-				sortArr.push(arr[j])
-			}
-		}
-	}
-	console.log(sortArr)
-	return sortArr.join(' ')
-}
+// 	for (let i = 0; i <= arr.length; i++) {
+// 		for (let j = 0; j < arr.length; j++) {
+// 			if (arr[j].indexOf(i) >= 0) {
+// 				sortArr.push(arr[j])
+// 			}
+// 		}
+// 	}
+// 	console.log(sortArr)
+// 	return sortArr.join(' ')
+// }
 
-console.log(order('is2 Thi1s T4est 3a'))
+// console.log(order('is2 Thi1s T4est 3a'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 08JUL2024///////////////////////////////
+
+//TASK
+// Terminal game move function
+// In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
+
+// Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+// Example:
+// move(3, 6) should equal 15
+
+//PSEUDOCODE
+
+//SOLUTION
+let move = (position, roll) => position + roll * 2
 
 // BEST SOLUTION
