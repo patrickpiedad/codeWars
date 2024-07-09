@@ -332,6 +332,41 @@
 //PSEUDOCODE
 
 //SOLUTION
-let move = (position, roll) => position + roll * 2
+// let move = (position, roll) => position + roll * 2
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 09JUL2024///////////////////////////////
+
+//TASK
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e.
+
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+// Note: keep the original order of the names in the output.
+
+//PSEUDOCODE
+// loop through array
+// if current element length is 4, then push to friendArr
+// return friendArr
+
+//SOLUTION
+function friend(friends) {
+	let friendArr = []
+	for (let i = 0; i < friends.length; i++) {
+		if (friends[i].length === 4) {
+			friendArr.push(friends[i])
+		}
+	}
+	return friendArr
+}
+
+console.log(friend(['Ryan', 'Kieran', 'Mark']))
 
 // BEST SOLUTION
