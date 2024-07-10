@@ -357,16 +357,56 @@
 // return friendArr
 
 //SOLUTION
-function friend(friends) {
-	let friendArr = []
-	for (let i = 0; i < friends.length; i++) {
-		if (friends[i].length === 4) {
-			friendArr.push(friends[i])
-		}
-	}
-	return friendArr
-}
+// function friend(friends) {
+// 	let friendArr = []
+// 	for (let i = 0; i < friends.length; i++) {
+// 		if (friends[i].length === 4) {
+// 			friendArr.push(friends[i])
+// 		}
+// 	}
+// 	return friendArr
+// }
 
-console.log(friend(['Ryan', 'Kieran', 'Mark']))
+// console.log(friend(['Ryan', 'Kieran', 'Mark']))
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 10JUL2024///////////////////////////////
+
+//TASK
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+// Your function only needs to return the result, what is shown between parentheses in the example below is how you reach that result and it's not part of it, see the sample tests.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+//PARAMETERS
+//program takes in a number. number will always be a positive integer greather than 0. no decimals
+
+//RETURNS
+//returning the sum of all numbers from 1 to the number
+
+//EXAMPLES
+//num = 2 returns 3
+//num = 8 returns 36
+
+//PSEUDOCODE
+//starting with 0 as variable
+//loop from 1 until the num, to include num <=
+//return ans
+
+//SOLUTION
+var summation = function (num) {
+	let ans = 0
+	for (let i = 1; i <= num; i++) {
+		ans += i
+	}
+	return ans
+}
+
+console.log(summation(8))
+
+//BEST SOLUTION

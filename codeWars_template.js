@@ -1,4 +1,7 @@
 ///////////////////////////////codeWars DDMMMYY///////////////////////////////
+
+//TASK
+
 //PARAMETERS
 
 //RETURNS
@@ -7,11 +10,16 @@
 
 //PSEUDOCODE
 
+//SOLUTION
+
+//BEST SOLUTION
+
 ///////////////////////////////Old Format///////////////////////////////
+
 //TASK
 
 //PSEUDOCODE
 
 //SOLUTION
 
-// BEST SOLUTION
+//BEST SOLUTION
