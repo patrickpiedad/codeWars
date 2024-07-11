@@ -443,15 +443,28 @@
 // given integer k that is will always be an integer
 
 // RETURNS
-//
+// returns the first longest string consisting of k consecutive strings from the array
 
 // EXAMPLES
+// longest_consec(strarr, 2) should return "folingtrashy"
 
 // PSEUDOCODE
 
 // SOLUTION
-function longestConsec(strarr, k) {
-	// your code
-}
+// function longestConsec(strarr, k) {
+// 	// your code
+// }
 
 // BEST SOLUTION
+
+function longestConsec(strarr, k) {
+	var longest = ''
+	for (var i = 0; k > 0 && i <= strarr.length - k; i++) {
+		var tempArray = strarr.slice(i, i + k)
+		var tempStr = tempArray.join('')
+		if (tempStr.length > longest.length) {
+			longest = tempStr
+		}
+	}
+	return longest
+}
