@@ -5,9 +5,9 @@ This is my repository of daily Code Wars work. I have sorted the files by month,
 Code Wars Profile: https://www.codewars.com/users/patrickpiedad
 
 ## How It's Made
-Tech Used: HTML, CSS, JavaScript
+Tech Used: HTML, CSS, JavaScript, C#
 <br></br>
-This is a simple repository that is mainly JavaScript files with each Code Wars problem annotated by day.
+This is a simple repository that is mainly JavaScript files and C# projects with each Code Wars problem annotated by day.
 
 ## Optimizations
 Future optimizations include creating a website design to display each Code Wars month file after the user selects the respective file.
