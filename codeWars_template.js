@@ -1,25 +1,25 @@
 ///////////////////////////////codeWars DDMMMYY///////////////////////////////
 
-//TASK
+// TASK
 
-//PARAMETERS
+// PARAMETERS
 
-//RETURNS
+// RETURNS
 
-//EXAMPLES
+// EXAMPLES
 
-//PSEUDOCODE
+// PSEUDOCODE
 
-//SOLUTION
+// SOLUTION
 
-//BEST SOLUTION
+// BEST SOLUTION
 
 ///////////////////////////////Old Format///////////////////////////////
 
-//TASK
+// TASK
 
-//PSEUDOCODE
+// PSEUDOCODE
 
-//SOLUTION
+// SOLUTION
 
-//BEST SOLUTION
+// BEST SOLUTION
