@@ -580,14 +580,6 @@
 // use indexOf and lastIndexOf NOT being equal, which will get you values that repeat at some point, then use % to see if they are repeat an odd number of times
 
 // SOLUTION
-// function findOdd(A) {
-// 	for (let i = 0; i < A.length; i++) {
-// 		if (A.indexOf(A[i]) !== A.lastIndexOf(A)) {
-// 			A.map()
-// 		}
-// 	}
-// }
-
 let findOdd = A => A.find(thing => A.filter(elem => elem == thing).length % 2);
 
 console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
