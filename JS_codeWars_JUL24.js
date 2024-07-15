@@ -580,9 +580,9 @@
 // use indexOf and lastIndexOf NOT being equal, which will get you values that repeat at some point, then use % to see if they are repeat an odd number of times
 
 // SOLUTION
-let findOdd = A => A.find(thing => A.filter(elem => elem == thing).length % 2);
+// let findOdd = A => A.find(thing => A.filter(elem => elem == thing).length % 2);
 
-console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 
 // BEST SOLUTION
 // const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
@@ -596,3 +596,44 @@ console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 // The XOR operation has a special property: if you XOR a number with itself an odd number of times, the result will be the number itself. If you XOR a number with itself an even number of times, the result will be 0. Since all numbers in the array appear even times except for one, the XOR operation will eventually leave you with the number that appears an odd number of times.
 
 // In summary, this code calculates the XOR of all the elements in the array, effectively finding the number that appears an odd number of times, and returns that number as the result of the findOdd function.
+
+///////////////////////////////codeWars 15JUL2024///////////////////////////////
+
+// TASK
+// Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+// For example:
+
+// solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+// solution(null); // should return []
+
+// PARAMETERS
+// passing in array of numbers
+// array of numbers will only have numbers in integer form, no strings
+// array COULD be empty or null, in which case, it should return an empty array
+
+// RETURNS
+// return sorted array of numbers in ascending order
+// if empty or null, return empty array
+
+// EXAMPLES
+// solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+// solution(null); // should return []
+
+// PSEUDOCODE
+// get array of numbers
+// have conditional to check if array is empty or null, in which case return []
+// use sort function with a - b parameter to sort in ascending order, according to the ASCII table
+
+// SOLUTION
+// function solution(nums) {
+// 	if (nums === null || nums === undefined) {
+// 		return [];
+// 	} else {
+// 		return nums.sort((a, b) => a - b);
+// 	}
+// }
+
+// console.log(solution([1, 2, 10, 50, 5]));
+
+// BEST SOLUTION
