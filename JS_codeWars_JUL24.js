@@ -637,3 +637,39 @@
 // console.log(solution([1, 2, 10, 50, 5]));
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 16JUL2024///////////////////////////////
+
+// TASK
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+// PARAMETERS
+// input will be the url argument in string form
+// input will have a .com and "#" at the end for some cases, if it does have a #... then remove the #...
+// input may not have the "#" at all
+
+// RETURNS
+// return url with # and everything after removed in string format
+// no other return
+
+// EXAMPLES
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+// PSEUDOCODE
+// url as argument variable
+// use split to break the string into the "first part" and then the "second part" starting with the anchor "#"
+// return the first string only
+
+// SOLUTION
+function removeUrlAnchor(url) {
+	url = url.split('#')[0];
+}
+
+console.log(removeUrlAnchor('www.codewars.com#about'));
+
+// BEST SOLUTION
