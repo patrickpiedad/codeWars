@@ -667,9 +667,47 @@
 
 // SOLUTION
 function removeUrlAnchor(url) {
-	url = url.split('#')[0];
+	return url.split('#')[0]
 }
 
-console.log(removeUrlAnchor('www.codewars.com#about'));
+console.log(removeUrlAnchor('www.codewars.com#about'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 17JUL2024///////////////////////////////
+
+// TASK
+// Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+
+// Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+// Create a function which translates a given DNA string into RNA.
+
+// For example:
+
+// "GCAT"  =>  "GCAU"
+// The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+
+// PARAMETERS
+// dna is inputted as argument
+// argument will contain only a string with capital letters
+
+// RETURNS
+// return converted RNA answer
+// changing any T to an U
+// no other returns
+
+// EXAMPLES
+// "GCAT"  =>  "GCAU"
+
+// PSEUDOCODE
+// use replaceAll method
+
+// SOLUTION
+function DNAtoRNA(dna) {
+	return dna.replaceAll('T', 'U')
+}
+
+console.log(DNAtoRNA('GCAT'))
 
 // BEST SOLUTION
