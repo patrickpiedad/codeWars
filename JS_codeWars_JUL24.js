@@ -704,10 +704,52 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // use replaceAll method
 
 // SOLUTION
-function DNAtoRNA(dna) {
-	return dna.replaceAll('T', 'U')
+// function DNAtoRNA(dna) {
+// 	return dna.replaceAll('T', 'U')
+// }
+
+// console.log(DNAtoRNA('GCAT'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 18JUL2024///////////////////////////////
+
+// TASK
+// Write a function that takes a single non-empty string of only lowercase and uppercase ascii letters (word) as its argument,
+// and returns an ordered list containing the indices of all capital (uppercase) letters in the string.
+
+// Example (Input --> Output)
+// "CodEWaRs" --> [0,3,4,6]
+
+// PARAMETERS
+// take in in argument 'word', which will be a single non-empty string of only lowercase and uppercase ASCII letters
+
+// RETURNS
+// return ordered list containing index of all capital (uppercase) letters in the string
+// ordered list will be an array
+
+// EXAMPLES
+// "CodEWaRs" --> [0,3,4,6]
+
+// PSEUDOCODE
+// iterate through string and use conditional
+// for conditional, if the toUpperCase of the current string element matches current string element, then it is uppercase and push to new array
+// else, continue iteration
+// return array
+
+// SOLUTION
+var capitals = function (word) {
+	let wordArr = word.split('')
+	let ans = []
+	wordArr.forEach((elem, index) => {
+		if (elem.toUpperCase() === elem) {
+			ans.push(index)
+		}
+	})
+	return ans
 }
 
-console.log(DNAtoRNA('GCAT'))
+console.log('Quokka is currently running')
+console.log(capitals('CodEWaRs'))
 
 // BEST SOLUTION
