@@ -738,18 +738,82 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // return array
 
 // SOLUTION
-var capitals = function (word) {
-	let wordArr = word.split('')
+// var capitals = function (word) {
+// 	let wordArr = word.split('')
+// 	let ans = []
+// 	wordArr.forEach((elem, index) => {
+// 		if (elem.toUpperCase() === elem) {
+// 			ans.push(index)
+// 		}
+// 	})
+// 	return ans
+// }
+
+// console.log('Quokka is currently running')
+// console.log(capitals('CodEWaRs'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 19JUL2024///////////////////////////////
+
+// TASK
+// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+
+// If you want to know more: http://en.wikipedia.org/wiki/DNA
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side.
+// DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+
+// Example: (input --> output)
+
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+// PARAMETERS
+// receiving "dna" as argument.
+// dna will be a string with only letters from the english alphabet
+// dna will never be empty
+
+// RETURNS
+// need to return the complimentary of dna where A and T values are swapped, and C and G values are swapped
+// need to return in string format
+
+// EXAMPLES
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+// PSEUDOCODE
+// get dna as argument
+// make new empty array (which will be converted into a string later)
+// conditional, nonmutating, for loop
+// if dna[i] = A, push T into new arr
+// if dna[i] = T, push A into new arr
+// if dna[i] = C, push G into new arr
+// if dna[i] = G, push C into new arr
+// else push dna[i]
+// join arr and return
+
+// SOLUTION
+function dnaStrand(dna) {
 	let ans = []
-	wordArr.forEach((elem, index) => {
-		if (elem.toUpperCase() === elem) {
-			ans.push(index)
+	for (let i = 0; i < dna.length; i++) {
+		if (dna[i] === 'A') {
+			ans.push('T')
+		} else if (dna[i] === 'T') {
+			ans.push('A')
+		} else if (dna[i] === 'G') {
+			ans.push('C')
+		} else if (dna[i] === 'C') {
+			ans.push('G')
+		} else {
+			ans.push(dna[i])
 		}
-	})
-	return ans
+	}
+	return ans.join('')
 }
 
-console.log('Quokka is currently running')
-console.log(capitals('CodEWaRs'))
+console.log(dnaStrand('ATTGC'))
 
 // BEST SOLUTION
