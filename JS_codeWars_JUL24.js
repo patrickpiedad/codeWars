@@ -796,24 +796,71 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // join arr and return
 
 // SOLUTION
-function dnaStrand(dna) {
-	let ans = []
-	for (let i = 0; i < dna.length; i++) {
-		if (dna[i] === 'A') {
-			ans.push('T')
-		} else if (dna[i] === 'T') {
-			ans.push('A')
-		} else if (dna[i] === 'G') {
-			ans.push('C')
-		} else if (dna[i] === 'C') {
-			ans.push('G')
-		} else {
-			ans.push(dna[i])
-		}
+// function dnaStrand(dna) {
+// 	let ans = []
+// 	for (let i = 0; i < dna.length; i++) {
+// 		if (dna[i] === 'A') {
+// 			ans.push('T')
+// 		} else if (dna[i] === 'T') {
+// 			ans.push('A')
+// 		} else if (dna[i] === 'G') {
+// 			ans.push('C')
+// 		} else if (dna[i] === 'C') {
+// 			ans.push('G')
+// 		} else {
+// 			ans.push(dna[i])
+// 		}
+// 	}
+// 	return ans.join('')
+// }
+
+// console.log(dnaStrand('ATTGC'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 20JUL2024///////////////////////////////
+
+// TASK
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence
+// "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+// PARAMETERS
+// receive parameter called string
+// string will contain only letters from the english alphabet, spaces, and punctuation marks.
+// string will not contain any numbers
+// no other parameters given
+
+// RETURNS
+// return true if pangram, false if not pangram
+// can mutate string if needed
+
+// EXAMPLES
+// "The quick brown fox jumps over the lazy dog" => true
+
+// PSEUDOCODE
+// get string, .split('') to make into array
+// use .includes to give criteria of all alphabet letters, using conditional
+// if includes all alphabet letters, then return true, else false
+
+// SOLUTION
+function isPangram(string) {
+	string = string.replaceAll(' ', '')
+	string = string.replaceAll('!', '')
+	string = string.replaceAll('?', '')
+	string = string.replaceAll('.', '')
+	string = string.replaceAll("'", '')
+	let stringArr = string.toLowerCase().split('')
+	console.log(stringArr)
+	if (stringArr.every(letter => stringArr.includes('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'))) {
+		return true
+	} else {
+		return false
 	}
-	return ans.join('')
 }
 
-console.log(dnaStrand('ATTGC'))
+console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+console.log(isPangram('elbow'))
 
 // BEST SOLUTION
