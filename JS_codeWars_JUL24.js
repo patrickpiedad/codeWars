@@ -845,22 +845,27 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // if includes all alphabet letters, then return true, else false
 
 // SOLUTION
+// function isPangram(string) {
+// 	string = string.replaceAll(' ', '')
+// 	string = string.replaceAll('!', '')
+// 	string = string.replaceAll('?', '')
+// 	string = string.replaceAll('.', '')
+// 	string = string.replaceAll("'", '')
+// 	let stringArr = string.toLowerCase().split('')
+// 	console.log(stringArr)
+// 	if (stringArr.every(letter => stringArr.includes('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'))) {
+// 		return true
+// 	} else {
+// 		return false
+// 	}
+// }
+
+// BEST SOLUTION
 function isPangram(string) {
-	string = string.replaceAll(' ', '')
-	string = string.replaceAll('!', '')
-	string = string.replaceAll('?', '')
-	string = string.replaceAll('.', '')
-	string = string.replaceAll("'", '')
-	let stringArr = string.toLowerCase().split('')
-	console.log(stringArr)
-	if (stringArr.every(letter => stringArr.includes('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'))) {
-		return true
-	} else {
-		return false
-	}
+	const alphabetList = [...'abcdefghijklmnopqrstuvwxyz']
+
+	return alphabetList.every(letter => string.toLowerCase().includes(letter))
 }
 
 console.log(isPangram('The quick brown fox jumps over the lazy dog'))
 console.log(isPangram('elbow'))
-
-// BEST SOLUTION
