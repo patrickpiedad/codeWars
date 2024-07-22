@@ -861,11 +861,81 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // }
 
 // BEST SOLUTION
-function isPangram(string) {
-	const alphabetList = [...'abcdefghijklmnopqrstuvwxyz']
+// function isPangram(string) {
+// 	const alphabetList = [...'abcdefghijklmnopqrstuvwxyz']
 
-	return alphabetList.every(letter => string.toLowerCase().includes(letter))
+// 	return alphabetList.every(letter => string.toLowerCase().includes(letter))
+// }
+
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+// console.log(isPangram('elbow'))
+
+///////////////////////////////codeWars 22JUL2024///////////////////////////////
+
+// TASK
+// In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town.
+// How many years does the town need to see its population greater than or equal to p = 1200 inhabitants?
+
+// At the end of the first year there will be:
+// 1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+// At the end of the 2nd year there will be:
+// 1070 + 1070 * 0.02 + 50 => 1141 inhabitants (** number of inhabitants is an integer **)
+
+// At the end of the 3rd year there will be:
+// 1141 + 1141 * 0.02 + 50 => 1213
+
+// It will need 3 entire years.
+// More generally given parameters:
+
+// p0, percent, aug (inhabitants coming or leaving each year), p (population to equal or surpass)
+
+// the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+
+// aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
+
+// PARAMETERS
+// p0 is the initial population  of the town, which is 1000. this will be a number parameter, not a string and will not contain decimals
+// percent is the rate of population increase, which is 2% or 0.02. this will be a number paramter, not a string and will contain decimals
+// aug is the decrease/increase of the population outside of the 2% increase, which is 50 per year.
+// p is the population to equal or surpass, as requested in the formula
+// answer must be a whole number rounded down, use .floor method
+
+// RETURNS
+// return the number of years it will take to reach "p," rounding down the number of inhabitans per year that is calculated by the formula
+// this return is for the function nb_year and should return the number of entire years needed to get a populatio ngreate or equal to p
+// we are returning a full year, not a decimal year, round up
+
+// EXAMPLES
+// At the end of the first year there will be:
+// 1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+// At the end of the 2nd year there will be:
+// 1070 + 1070 * 0.02 + 50 => 1141 inhabitants (** number of inhabitants is an integer **)
+
+// At the end of the 3rd year there will be:
+// 1141 + 1141 * 0.02 + 50 => 1213
+
+// PSEUDOCODE
+// write the formula for population increase with parameters, no hard coded numbers
+// p0 + (p0 * percent/100) + aug => if this is less than p0, then continue to the next year
+// if this is greater than or equal to p0, then return what year you are on
+// need to use while loop to continue looping until the formuala conditional is satisfied
+
+// SOLUTION
+function nbYear(p0, percent, aug, p) {
+	let totalPopulation = 0
+	let populationChange = 0
+	let yearCounter = 0
+	while (totalPopulation < p) {
+		yearCounter++
+		populationChange = Math.floor(p0 * (percent / 100) + aug)
+		totalPopulation = p0 + populationChange
+		p0 = totalPopulation
+	}
+	return yearCounter
 }
 
-console.log(isPangram('The quick brown fox jumps over the lazy dog'))
-console.log(isPangram('elbow'))
+console.log(nbYear(1500, 5, 100, 5000))
+
+// BEST SOLUTION
