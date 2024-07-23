@@ -923,19 +923,58 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // need to use while loop to continue looping until the formuala conditional is satisfied
 
 // SOLUTION
-function nbYear(p0, percent, aug, p) {
-	let totalPopulation = 0
-	let populationChange = 0
-	let yearCounter = 0
-	while (totalPopulation < p) {
-		yearCounter++
-		populationChange = Math.floor(p0 * (percent / 100) + aug)
-		totalPopulation = p0 + populationChange
-		p0 = totalPopulation
-	}
-	return yearCounter
-}
+// function nbYear(p0, percent, aug, p) {
+// 	let totalPopulation = 0
+// 	let populationChange = 0
+// 	let yearCounter = 0
+// 	while (totalPopulation < p) {
+// 		yearCounter++
+// 		populationChange = Math.floor(p0 * (percent / 100) + aug)
+// 		totalPopulation = p0 + populationChange
+// 		p0 = totalPopulation
+// 	}
+// 	return yearCounter
+// }
 
-console.log(nbYear(1500, 5, 100, 5000))
+// console.log(nbYear(1500, 5, 100, 5000))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 23JUL2024///////////////////////////////
+
+// TASK
+// Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+
+// a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
+
+// The four operators are "add", "subtract", "divide", "multiply".
+
+// A few examples:(Input1, Input2, Input3 --> Output)
+
+// PARAMETERS
+// a and b will be positive integers with a being first and b being second at all times
+// operations are "add" "subtract" 'divide" and "multiply"
+
+// RETURNS
+// return a operator b
+
+// EXAMPLES
+// A few examples:(Input1, Input2, Input3 --> Output)
+
+// PSEUDOCODE
+// conditionals with cases being based on operator names
+
+// SOLUTION
+function arithmetic(a, b, operator) {
+	if (operator === 'add') {
+		return a + b
+	} else if (operator == 'subtract') {
+		return a - b
+	} else if (operator == 'divide') {
+		return a / b
+	} else if (operator == 'multiply') {
+		return a * b
+	}
+}
 
 // BEST SOLUTION
