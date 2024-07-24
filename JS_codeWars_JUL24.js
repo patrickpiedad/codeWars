@@ -1012,7 +1012,7 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 
 // SOLUTION
 function sumArray(array) {
-	if (array == []) {
+	if (array == null) {
 		return 0
 	} else if (array.length == 1) {
 		return 0
