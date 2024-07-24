@@ -965,16 +965,66 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // conditionals with cases being based on operator names
 
 // SOLUTION
-function arithmetic(a, b, operator) {
-	if (operator === 'add') {
-		return a + b
-	} else if (operator == 'subtract') {
-		return a - b
-	} else if (operator == 'divide') {
-		return a / b
-	} else if (operator == 'multiply') {
-		return a * b
+// function arithmetic(a, b, operator) {
+// 	if (operator === 'add') {
+// 		return a + b
+// 	} else if (operator == 'subtract') {
+// 		return a - b
+// 	} else if (operator == 'divide') {
+// 		return a / b
+// 	} else if (operator == 'multiply') {
+// 		return a * b
+// 	}
+// }
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 24JUL2024///////////////////////////////
+
+// TASK
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+// Mind the input validation.
+
+// Example
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Input validation
+// If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
+
+// PARAMETERS
+// getting array of numbers, only integers, unsorted
+
+// RETURNS
+// returning sum of all numbers excluding highest and lowest values
+// returning only the sum as a number, no array or string
+
+// EXAMPLES
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+
+// PSEUDOCODE
+// sort array
+// remove first value, remove last value
+// reduce
+
+// SOLUTION
+function sumArray(array) {
+	if (array == []) {
+		return 0
+	} else if (array.length == 1) {
+		return 0
+	} else {
+		array = array.sort((a, b) => a - b)
+		array[0] = 0
+		array[array.length - 1] = 0
+		console.log(array)
+		return array.reduce((acc, currVal) => acc + currVal, 0)
 	}
 }
+
+console.log(sumArray([6, 2, 1, 8, 10]))
 
 // BEST SOLUTION
