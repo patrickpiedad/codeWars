@@ -1011,20 +1011,65 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // reduce
 
 // SOLUTION
-function sumArray(array) {
-	if (array == null) {
-		return 0
-	} else if (array.length == 1) {
-		return 0
+// function sumArray(array) {
+// 	if (array == null) {
+// 		return 0
+// 	} else if (array.length == 1) {
+// 		return 0
+// 	} else {
+// 		array = array.sort((a, b) => a - b)
+// 		array[0] = 0
+// 		array[array.length - 1] = 0
+// 		console.log(array)
+// 		return array.reduce((acc, currVal) => acc + currVal, 0)
+// 	}
+// }
+
+// console.log(sumArray([6, 2, 1, 8, 10]))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 25JUL2024///////////////////////////////
+
+// // TASK
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+// You can assume all values in the array are numbers.
+
+// PARAMETERS
+// a will be the array that will all be numbers, no strings
+// limit will be a number as well, no strings
+// array with not being empty and will always have at least one number in it
+// numbers may be positive or negative
+
+// RETURNS
+// return true if all numbers in a are less than or equal to limit
+// else return false
+
+// EXAMPLES
+// a = [-5, 10, 20, 102], limit = 102 => true
+// a = [10, 20, 30], limit = 25 => false
+
+// PSEUDOCODE
+// iterate through a with conditional comparing a[i] to limit with <= operator
+
+// SOLUTION
+function smallEnough(a, limit) {
+	let counter = 0
+	for (let i = 0; i < a.length; i++) {
+		if (a[i] <= limit) {
+			continue
+		} else {
+			counter++
+		}
+	}
+	if (counter > 0) {
+		return false
 	} else {
-		array = array.sort((a, b) => a - b)
-		array[0] = 0
-		array[array.length - 1] = 0
-		console.log(array)
-		return array.reduce((acc, currVal) => acc + currVal, 0)
+		return true
 	}
 }
 
-console.log(sumArray([6, 2, 1, 8, 10]))
+console.log(smallEnough([-5, 10, 20, 102], 102))
 
 // BEST SOLUTION
