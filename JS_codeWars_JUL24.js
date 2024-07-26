@@ -1054,22 +1054,52 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // iterate through a with conditional comparing a[i] to limit with <= operator
 
 // SOLUTION
-function smallEnough(a, limit) {
-	let counter = 0
-	for (let i = 0; i < a.length; i++) {
-		if (a[i] <= limit) {
-			continue
-		} else {
-			counter++
-		}
-	}
-	if (counter > 0) {
-		return false
-	} else {
-		return true
-	}
-}
+// function smallEnough(a, limit) {
+// 	let counter = 0
+// 	for (let i = 0; i < a.length; i++) {
+// 		if (a[i] <= limit) {
+// 			continue
+// 		} else {
+// 			counter++
+// 		}
+// 	}
+// 	if (counter > 0) {
+// 		return false
+// 	} else {
+// 		return true
+// 	}
+// }
 
-console.log(smallEnough([-5, 10, 20, 102], 102))
+// console.log(smallEnough([-5, 10, 20, 102], 102))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 26JUL2024///////////////////////////////
+
+// TASK
+// Very simple, given a number (integer / decimal / both depending on the language), find its opposite (additive inverse).
+
+// Examples:
+
+// 1: -1
+// 14: -14
+// -34: 34
+
+// PARAMETERS
+// getting number (integer or decimal)
+
+// RETURNS
+// return opposite value of number
+
+// EXAMPLES
+// 1: -1
+// 14: -14
+// -34: 34
+
+// PSEUDOCODE
+// return -(number)
+
+// SOLUTION
+const opposite = number => -number
 
 // BEST SOLUTION
