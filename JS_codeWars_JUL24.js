@@ -1100,6 +1100,52 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // return -(number)
 
 // SOLUTION
-const opposite = number => -number
+// const opposite = number => -number
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 27JUL2024///////////////////////////////
+
+// TASK
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+// Examples:
+
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+
+// However, the arrays can have varying lengths, not just limited to 4.
+
+// PARAMETERS
+// given array of varying lengths, only containing 0's and 1's
+// array will only haven numbers, no string number representations
+
+// RETURNS
+// return equivalent number of binary array
+
+// EXAMPLES
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+
+// PSEUDOCODE
+// join array to create binary form
+// use parseint function to convert to number, using 2 as radix for binary number system
+
+// SOLUTION
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
 
 // BEST SOLUTION
