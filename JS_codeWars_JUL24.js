@@ -1146,6 +1146,45 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // use parseint function to convert to number, using 2 as radix for binary number system
 
 // SOLUTION
-const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
+// const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 29JUL2024///////////////////////////////
+
+// TASK
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+// Your function would return the following array:
+
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+// PARAMETERS
+// receiving array of strings with each string being an element in the array
+// array will only strings, no numbers or other value types aside from strings
+// array will always have elements, will not be empty
+// strings in array will all be different lengths, no strings will have the same length
+
+// RETURNS
+// return array (either same manipulated array or new array) of strings in order of lengths
+// all elements in array are strings also
+
+// EXAMPLES
+// ["Telescopes", "Glasses", "Eyes", "Monocles"] => ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// PSEUDOCODE
+// get array of strings
+// use sort method to sort array based off of string length from smallest to largest (ascending)
+
+// SOLUTION
+const sortByLength = array => array.sort((a, b) => a.length - b.length)
+
+console.log(sortByLength(['Telescopes', 'Glasses', 'Eyes', 'Monocles']))
 
 // BEST SOLUTION
