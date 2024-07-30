@@ -1183,8 +1183,69 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // use sort method to sort array based off of string length from smallest to largest (ascending)
 
 // SOLUTION
-const sortByLength = array => array.sort((a, b) => a.length - b.length)
+// const sortByLength = array => array.sort((a, b) => a.length - b.length)
 
-console.log(sortByLength(['Telescopes', 'Glasses', 'Eyes', 'Monocles']))
+// console.log(sortByLength(['Telescopes', 'Glasses', 'Eyes', 'Monocles']))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 30JUL2024///////////////////////////////
+
+// TASK
+// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+// Input
+// Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+// Output
+// Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+// Example
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+// PARAMETERS
+// data will be an array of arrays
+// each inner array will have two numbers only
+// numbers will only be positive integers
+
+// RETURNS
+// return single dimensdional array of strings
+
+// EXAMPLES
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+// PSEUDOCODE
+// foreach loop to select each array
+// use index to create conditional for either "open" or "senior" criteria
+// create array to push open/senior values
+// return this array
+
+// SOLUTION
+function openOrSenior(data) {
+	ansArray = []
+	data.forEach(innerArray => {
+		if (innerArray[0] >= 55 && innerArray[1] > 7) {
+			ansArray.push('Senior')
+		} else {
+			ansArray.push('Open')
+		}
+	})
+	return ansArray
+}
+
+console.log(
+	openOrSenior([
+		[18, 20],
+		[45, 2],
+		[61, 12],
+		[37, 6],
+		[21, 21],
+		[78, 9],
+	])
+)
 
 // BEST SOLUTION
