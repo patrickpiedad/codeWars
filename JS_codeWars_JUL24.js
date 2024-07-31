@@ -1225,27 +1225,110 @@ console.log(removeUrlAnchor('www.codewars.com#about'))
 // return this array
 
 // SOLUTION
-function openOrSenior(data) {
-	ansArray = []
-	data.forEach(innerArray => {
-		if (innerArray[0] >= 55 && innerArray[1] > 7) {
-			ansArray.push('Senior')
-		} else {
-			ansArray.push('Open')
-		}
-	})
-	return ansArray
+// function openOrSenior(data) {
+// 	ansArray = []
+// 	data.forEach(innerArray => {
+// 		if (innerArray[0] >= 55 && innerArray[1] > 7) {
+// 			ansArray.push('Senior')
+// 		} else {
+// 			ansArray.push('Open')
+// 		}
+// 	})
+// 	return ansArray
+// }
+
+// console.log(
+// 	openOrSenior([
+// 		[18, 20],
+// 		[45, 2],
+// 		[61, 12],
+// 		[37, 6],
+// 		[21, 21],
+// 		[78, 9],
+// 	])
+// )
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 31JUL2024///////////////////////////////
+
+// TASK
+// Your start-up's BA has told marketing that your website has a large audience in Scandinavia and surrounding countries. Marketing thinks it would be great to welcome visitors to the site in their own language. Luckily you already use an API that detects the user's location, so this is an easy win.
+
+// The Task
+// Think of a way to store the languages as a database. The languages are listed below so you can copy and paste!
+// Write a 'welcome' function that takes a parameter 'language', with a type String, and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
+// The Database
+// [ ("english", "Welcome")
+// , ("czech", "Vitejte")
+// , ("danish", "Velkomst")
+// , ("dutch", "Welkom")
+// , ("estonian", "Tere tulemast")
+// , ("finnish", "Tervetuloa")
+// , ("flemish", "Welgekomen")
+// , ("french", "Bienvenue")
+// , ("german", "Willkommen")
+// , ("irish", "Failte")
+// , ("italian", "Benvenuto")
+// , ("latvian", "Gaidits")
+// , ("lithuanian", "Laukiamas")
+// , ("polish", "Witamy")
+// , ("spanish", "Bienvenido")
+// , ("swedish", "Valkommen")
+// , ("welsh", "Croeso")
+// ]
+// Possible invalid inputs include:
+
+// IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip address
+// IP_ADDRESS_NOT_FOUND - ip address not in the database
+// IP_ADDRESS_REQUIRED - no ip address was supplied
+
+// PARAMETERS
+// take in language string
+// string may not always be correct
+
+// RETURNS
+// return greeting in given language
+// if language does not exist in databse, then return english greeting by default (else statement)
+
+// EXAMPLES
+// (english) => "Welcome."
+// IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip address
+// IP_ADDRESS_NOT_FOUND - ip address not in the database
+// IP_ADDRESS_REQUIRED - no ip address was supplied
+
+// PSEUDOCODE
+
+// SOLUTION
+
+function greet(language) {
+	const languageDatabase = [
+		['english', 'Welcome'],
+		['czech', 'Vitejte'],
+		['danish', 'Velkomst'],
+		['dutch', 'Welkom'],
+		['estonian', 'Tere tulemast'],
+		['finnish', 'Tervetuloa'],
+		['flemish', 'Welgekomen'],
+		['french', 'Bienvenue'],
+		['german', 'Willkommen'],
+		['irish', 'Failte'],
+		['italian', 'Benvenuto'],
+		['latvian', 'Gaidits'],
+		['lithuanian', 'Laukiamas'],
+		['polish', 'Witamy'],
+		['spanish', 'Bienvenido'],
+		['swedish', 'Valkommen'],
+		['welsh', 'Croeso'],
+	]
+
+	if (languageDatabase.flat().includes(language)) {
+		return languageDatabase[languageDatabase.findIndex(element => element[0] === language)][1]
+	} else {
+		return languageDatabase[0][1]
+	}
 }
 
-console.log(
-	openOrSenior([
-		[18, 20],
-		[45, 2],
-		[61, 12],
-		[37, 6],
-		[21, 21],
-		[78, 9],
-	])
-)
+console.log(greet('dutch'))
 
 // BEST SOLUTION
