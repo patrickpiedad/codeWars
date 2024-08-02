@@ -27,8 +27,61 @@
 // compare spliced str and endind, if equal then return true, else return false
 
 // SOLUTION
-const solution = (str, ending) => (ending === str.slice(-ending.length) || ending === '' ? true : false)
+// const solution = (str, ending) => (ending === str.slice(-ending.length) || ending === '' ? true : false)
 
-console.log(solution('abc', 'bc'))
+// console.log(solution('abc', 'bc'))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 02AUG2024///////////////////////////////
+
+// TASK
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+// PARAMETERS
+// receiving two arrays (a and b)
+// arrays will have integers in them, no decimals or other types of numbers
+// array will not be empty and always have numbers in them
+
+// RETURNS
+// return one array
+// returned array must have only values that are not repeated from list b in list a
+// basically, anything in b must be removed from a, and order of numbers must be preserved and not necessarily is put in sorted order when given
+
+// EXAMPLES
+//arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+// PSEUDOCODE
+// get array a and array b
+// foreach element in a, compare to element in b and remove if equal
+
+// SOLUTION
+// function arrayDiff(a, b) {
+// 	for (let i = 0; i < a.length; i++) {
+// 		console.log(a[i])
+// 		if (b.length === 0) {
+// 			return a
+// 		}
+// 		for (let j = 0; j < b.length; j++) {
+// 			if (a[i] === b[j]) {
+// 				a(a[i])
+// 			}
+// 		}
+// 	}
+// 	return a
+// }
+
+function arrayDiff(a, b) {
+	return a.filter(element => !b.includes(element))
+}
+
+console.log(arrayDiff([1, 2, 3], [1, 2]))
 
 // BEST SOLUTION
