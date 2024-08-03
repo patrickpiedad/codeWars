@@ -78,10 +78,42 @@
 // 	return a
 // }
 
-function arrayDiff(a, b) {
-	return a.filter(element => !b.includes(element))
-}
+// function arrayDiff(a, b) {
+// 	return a.filter(element => !b.includes(element))
+// }
 
-console.log(arrayDiff([1, 2, 3], [1, 2]))
+// console.log(arrayDiff([1, 2, 3], [1, 2]))
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 03AUG2024///////////////////////////////
+
+// TASK
+// Write a function to split a string and convert it into an array of words.
+
+// Examples (Input ==> Output):
+// "Robin Singh" ==> ["Robin", "Singh"]
+
+// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+// EXAMPLES
+// "Robin Singh" ==> ["Robin", "Singh"]
+
+// REPEAT
+// I'm writing a function that will take a string and convert the stirng into an array of words
+// The string words will be separated by a space
+// I will return an array of strings, to include numbers as strings if the argument has numbers in the string
+
+// APPROACH
+// Take the input string and use .split method, separating members to be split by a space
+
+// CODE
+const stringToArray = string => string.split(' ')
+
+// TEST
+console.log(stringToArray('I love arrays they are my favorite'))
+
+// OPTIMIZE
+// No other optimizations for this problem
 
 // BEST SOLUTION
