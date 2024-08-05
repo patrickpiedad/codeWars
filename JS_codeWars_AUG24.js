@@ -108,12 +108,40 @@
 // Take the input string and use .split method, separating members to be split by a space
 
 // CODE
-const stringToArray = string => string.split(' ')
+// const stringToArray = string => string.split(' ')
 
-// TEST
-console.log(stringToArray('I love arrays they are my favorite'))
+// // TEST
+// console.log(stringToArray('I love arrays they are my favorite'))
 
 // OPTIMIZE
 // No other optimizations for this problem
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 05AUG2024///////////////////////////////
+
+// TASK
+// Now you have to write a function that takes an argument and returns the square of it.
+
+// REPEAT
+// The task is to write a function that will take an argument and return the square of that argument.
+// I assume the argument will always be in number form (ie. not in string form and require conversion)
+// I assume that the argument will never be null
+
+// EXAMPLES
+// 4 => 16
+// 10 => 100
+
+// APPROACH
+// simply function with arrow function format, take in number and return number * number
+
+// CODE
+const square = number => number * number
+
+// TEST
+console.log(square(4))
+console.log(square(10))
+
+// OPTIMIZE
 
 // BEST SOLUTION
