@@ -136,11 +136,56 @@
 // simply function with arrow function format, take in number and return number * number
 
 // CODE
-const square = number => number * number
+// const square = number => number * number
 
 // TEST
-console.log(square(4))
-console.log(square(10))
+// console.log(square(4))
+// console.log(square(10))
+
+// OPTIMIZE
+// Possible to also use Math.sqrt function
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 06AUG2024///////////////////////////////
+
+// TASK
+// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+// Examples
+// [7, 1]  =>  [1, 7]
+// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+// REPEAT
+// I will be given an array of numbers. This array will have only numbers, both even and odd. I need to sort the odd numbers in ascending order, that is lowest to highest,
+// while leaving the even numbers at their original positions.
+
+// EXAMPLES
+// [7, 1]  =>  [1, 7]
+// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+// APPROACH
+//
+
+// CODE
+function sortArray(array) {
+	let oddNumbers = array.filter(num => num % 2 !== 0)
+	oddNumbers = oddNumbers.sort((a, b) => a - b)
+
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] % 2 !== 0) {
+			array[i] = oddNumbers.shift()
+		}
+	}
+	return array
+}
+
+// TEST
+console.log(sortArray([7, 1]))
+console.log(sortArray([3, 8, 6, 5, 4]))
+console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
 
 // OPTIMIZE
 
