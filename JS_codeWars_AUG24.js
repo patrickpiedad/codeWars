@@ -225,6 +225,7 @@ function isPalindrome(x) {
 console.log(isPalindrome('radar'))
 console.log(isPalindrome('racecar'))
 console.log(isPalindrome('elbow'))
+console.log(isPalindrome('quokka'))
 
 // OPTIMIZE
 
