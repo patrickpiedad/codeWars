@@ -170,22 +170,61 @@
 //
 
 // CODE
-function sortArray(array) {
-	let oddNumbers = array.filter(num => num % 2 !== 0)
-	oddNumbers = oddNumbers.sort((a, b) => a - b)
+// function sortArray(array) {
+// 	let oddNumbers = array.filter(num => num % 2 !== 0)
+// 	oddNumbers = oddNumbers.sort((a, b) => a - b)
 
-	for (let i = 0; i < array.length; i++) {
-		if (array[i] % 2 !== 0) {
-			array[i] = oddNumbers.shift()
-		}
+// 	for (let i = 0; i < array.length; i++) {
+// 		if (array[i] % 2 !== 0) {
+// 			array[i] = oddNumbers.shift()
+// 		}
+// 	}
+// 	return array
+// }
+
+// // TEST
+// console.log(sortArray([7, 1]))
+// console.log(sortArray([3, 8, 6, 5, 4]))
+// console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
+
+// OPTIMIZE
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 07AUG2024///////////////////////////////
+
+// TASK
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+
+// A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+
+// REPEAT
+// I will be given a word and I have to check if the word is a palindrome (same backwards and forwards)
+// The word will be in string or number form and the function should be case insensitive
+
+// EXAMPLES
+// racecar --> true
+// cambelak --> false
+// radar --> true
+
+// APPROACH
+// break given argument into array, reverse array, check to see if arrays equal each other
+
+// CODE
+function isPalindrome(x) {
+	const xReverse = x.split('').reverse().join('')
+	console.log(xReverse)
+	if (x.toLowerCase() === xReverse.toLowerCase()) {
+		return true
+	} else {
+		return false
 	}
-	return array
 }
 
 // TEST
-console.log(sortArray([7, 1]))
-console.log(sortArray([3, 8, 6, 5, 4]))
-console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]))
+console.log(isPalindrome('radar'))
+console.log(isPalindrome('racecar'))
+console.log(isPalindrome('elbow'))
 
 // OPTIMIZE
 
