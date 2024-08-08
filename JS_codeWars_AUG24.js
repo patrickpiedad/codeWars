@@ -211,21 +211,74 @@
 // break given argument into array, reverse array, check to see if arrays equal each other
 
 // CODE
-function isPalindrome(x) {
-	const xReverse = x.split('').reverse().join('')
-	console.log(xReverse)
-	if (x.toLowerCase() === xReverse.toLowerCase()) {
-		return true
-	} else {
-		return false
+// function isPalindrome(x) {
+// 	const xReverse = x.split('').reverse().join('')
+// 	console.log(xReverse)
+// 	if (x.toLowerCase() === xReverse.toLowerCase()) {
+// 		return true
+// 	} else {
+// 		return false
+// 	}
+// }
+
+// // TEST
+// console.log(isPalindrome('radar'))
+// console.log(isPalindrome('racecar'))
+// console.log(isPalindrome('elbow'))
+// console.log(isPalindrome('quokka'))
+
+// OPTIMIZE
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 08AUG2024///////////////////////////////
+
+// TASK
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+// REPEAT
+// I am taking an array of strings (names) and displaying the text given in the statements
+
+// EXAMPLES
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+// APPROACH
+// use array lengths to fuel conditionals
+// if array length is 0, then retun "no one likes this"
+// if array length is between 1 and three, use for loop and concat?
+
+// CODE
+function likes(names) {
+	if (names.length === 0) {
+		return 'no one likes this'
+	} else if (names.length === 1) {
+		return `${names[0]} likes this`
+	} else if (names.length === 2) {
+		return `${names[0]} and ${names[1]} like this`
+	} else if (names.length === 3) {
+		return `${names[0]}, ${names[1]}, and ${names[2]} like this`
+	} else if (names.length > 3) {
+		return `${names[0]}, ${names[1]}, and ${names.length - 2} others like this`
 	}
 }
 
 // TEST
-console.log(isPalindrome('radar'))
-console.log(isPalindrome('racecar'))
-console.log(isPalindrome('elbow'))
-console.log(isPalindrome('quokka'))
+console.log(likes(['Max', 'John', 'Mark']))
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
 
 // OPTIMIZE
 
