@@ -262,23 +262,60 @@
 // if array length is between 1 and three, use for loop and concat?
 
 // CODE
-function likes(names) {
-	if (names.length === 0) {
-		return 'no one likes this'
-	} else if (names.length === 1) {
-		return `${names[0]} likes this`
-	} else if (names.length === 2) {
-		return `${names[0]} and ${names[1]} like this`
-	} else if (names.length === 3) {
-		return `${names[0]}, ${names[1]}, and ${names[2]} like this`
-	} else if (names.length > 3) {
-		return `${names[0]}, ${names[1]}, and ${names.length - 2} others like this`
+// function likes(names) {
+// 	if (names.length === 0) {
+// 		return 'no one likes this'
+// 	} else if (names.length === 1) {
+// 		return `${names[0]} likes this`
+// 	} else if (names.length === 2) {
+// 		return `${names[0]} and ${names[1]} like this`
+// 	} else if (names.length === 3) {
+// 		return `${names[0]}, ${names[1]}, and ${names[2]} like this`
+// 	} else if (names.length > 3) {
+// 		return `${names[0]}, ${names[1]}, and ${names.length - 2} others like this`
+// 	}
+// }
+
+// // TEST
+// console.log(likes(['Max', 'John', 'Mark']))
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
+
+// OPTIMIZE
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 09AUG2024///////////////////////////////
+
+// TASK
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+// REPEAT
+// I will be given a string and have to return the number of vowels. The string will only have lower case letters and/or spaces.
+
+// EXAMPLES
+// apple --> 2
+// bread --> 2
+// monitor --> 3
+
+// APPROACH
+// loop through string and if conditional --> vowel --> count ++, return count
+
+// CODE
+function getCount(str) {
+	let count = 0
+	for (let i = 0; i < str.length; i++) {
+		if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+			count++
+		}
 	}
+	return count
 }
 
 // TEST
-console.log(likes(['Max', 'John', 'Mark']))
-console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
 
 // OPTIMIZE
 
