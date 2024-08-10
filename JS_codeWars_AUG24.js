@@ -305,18 +305,77 @@
 // loop through string and if conditional --> vowel --> count ++, return count
 
 // CODE
-function getCount(str) {
-	let count = 0
-	for (let i = 0; i < str.length; i++) {
-		if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
-			count++
-		}
-	}
-	return count
-}
+// function getCount(str) {
+// 	let count = 0
+// 	for (let i = 0; i < str.length; i++) {
+// 		if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+// 			count++
+// 		}
+// 	}
+// 	return count
+// }
 
 // TEST
 
 // OPTIMIZE
 
 // BEST SOLUTION
+
+///////////////////////////////codeWars 10AUG2024///////////////////////////////
+
+// TASK
+// Write Number in Expanded Form
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+// NOTE: All numbers will be whole numbers greater than 0.
+
+// REPEAT
+// I will be given a number and I need to return it in expanded form. That means returning each "tenth" of the number.
+
+// EXAMPLES
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+
+// APPROACH
+// take num, use modulus to get remainder and that becomes the first part of the expanded form
+// then reassign the regular number by 10 and Math.floor to make sure it isn't rounded incorrectly because of the decimal
+// continue this in your loop for the length of the number in string form
+// return all the saved portions
+
+// CODE
+function expandedForm(num) {
+	let arr = []
+	let numLength = num.toString().length
+
+	for (let i = 0; i < numLength; i++) {
+		pushVal = num - (num % 10)
+		arr.push(pushVal)
+		// arr.push(num % 10)
+		num = num - (num - (num % 10))
+		console.log(num)
+	}
+
+	return arr.join(' + ')
+}
+
+// TEST
+console.log(expandedForm(12))
+// console.log(expandedForm(42))
+// console.log(expandedForm(70304))
+
+// OPTIMIZE
+
+// BEST SOLUTION
+const expandedForm = n =>
+	n
+		.toString()
+		.split('')
+		.reverse()
+		.map((a, i) => a * Math.pow(10, i))
+		.filter(a => a > 0)
+		.reverse()
+		.join(' + ')
