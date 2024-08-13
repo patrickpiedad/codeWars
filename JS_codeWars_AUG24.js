@@ -402,18 +402,60 @@
 // APPROACH
 
 // CODE
-function firstNonConsecutive(arr) {
-	for (let i = 0; i < arr.length - 1; i++) {
-		if (arr[i] !== arr[i + 1] - 1) {
-			return arr[i + 1]
-		}
+// function firstNonConsecutive(arr) {
+// 	for (let i = 0; i < arr.length - 1; i++) {
+// 		if (arr[i] !== arr[i + 1] - 1) {
+// 			return arr[i + 1]
+// 		}
+// 	}
+// 	return null
+// }
+
+// // TEST
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
+// console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 8]))
+
+// OPTIMIZE
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 13AUG2024///////////////////////////////
+
+// TASK
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+// Let's assume that all numbers in the input will be integer values.
+
+// REPEAT
+// I am taking a number as an input, and returning the sum of the absolute value of each of its decimal place numbers.
+
+// EXAMPLES
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+
+// APPROACH
+// Assuming that all numbers in the input with be integer values, I will split the number into an array, the use a reduce function to find the sum
+// of its absolute value decimal places.
+
+// CODE
+function sumDigits(number) {
+	if (number === 0) {
+		return 0
 	}
-	return null
+	let numberArr = Math.abs(number).toString().split('')
+	return numberArr.reduce((acc, currVal) => Number(acc) + Number(currVal))
 }
 
 // TEST
-console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]))
-console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 8]))
+console.log(sumDigits(10))
+console.log(sumDigits(99))
+console.log(sumDigits(-32))
 
 // OPTIMIZE
 
