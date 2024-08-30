@@ -477,16 +477,55 @@
 // subtraction with conditional for edge case
 
 // CODE
-function combat(health, damage) {
-	if (health >= damage) {
-		return health - damage
-	} else if (damage > health) {
-		return 0
-	}
-}
+// function combat(health, damage) {
+// 	if (health >= damage) {
+// 		return health - damage
+// 	} else if (damage > health) {
+// 		return 0
+// 	}
+// }
 
 // TEST
 
 // OPTIMIZE
+
+// BEST SOLUTION
+
+///////////////////////////////codeWars 30AUG2024///////////////////////////////
+
+// TASK
+// Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+// For example:
+
+// a = 1
+// b = 4
+// --> [1, 2, 3, 4]
+
+// REPEAT
+// I will get two integers, a and b, where a is less than b, and I need to return an array of integers between a and b, including a and b
+
+// EXAMPLES
+// a = 1
+// b = 4
+// --> [1, 2, 3, 4]
+
+// APPROACH
+// take a and b, use for loop to add items to an array with a and b as the constraints
+
+// CODE
+function between(a, b) {
+	let arr = []
+	for (let i = a; i <= b; i++) {
+		arr.push(i)
+	}
+	return arr
+}
+
+// TEST
+console.log(between(1, 4))
+
+// OPTIMIZE
+// Time complexity is linear time because of the for loop
 
 // BEST SOLUTION
